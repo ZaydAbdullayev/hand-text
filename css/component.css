@@ -1,0 +1,28 @@
+.gradient-text {
+  background: linear-gradient(
+    90.26deg,
+    #0035e2 60.1%,
+    #4364f7 70.66%,
+    #6fb1fc 80.22%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.black-button {
+  padding: 8px 25px;
+  border-radius: 20px;
+  font-weight: bold;
+  background: #000;
+  color: #fff;
+  border: 2px solid #000;
+}
+
+.bordered-button {
+  padding: 8px 25px;
+  border-radius: 20px;
+  font-weight: bold;
+  background: #fff;
+  color: #000;
+  border: 2px solid #000;
+}

@@ -1,1 +1,8 @@
 https://www.figma.com/design/DDilp2lrxh1DVAXW7YVZEM/Hand-Text?node-id=0-1&node-type=canvas&t=KEeJ1RadjwcwdRPf-0
+font: 
+vasek
+caveat
+StreetbrushW01-Regular
+VoronovFont
+Yahfie
+???? ??? ?

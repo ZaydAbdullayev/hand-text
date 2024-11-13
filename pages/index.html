@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/component.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Hand Text</title>
+  </head>
+  <body>
+    <div class="w100 df fdc aic gap6 wrapper">
+      <nav class="w100 df aic jcsb px5 navbar">
+        <div class="f1 df aic gap6 _left">
+          <figure class="df aic jcc logo"></figure>
+          <a href="#">Перевод текста</a>
+          <a href="#">Для кого </a>
+          <a href="#">Примеры</a>
+        </div>
+        <div class="df aic gap2 _right">
+          <button class="bordered-button">Войти</button>
+          <button class="black-button">Зарегистрироваться</button>
+        </div>
+      </nav>
+
+      <div class="w100 df fww gap4 hero">
+        <h1 class="w100 df aic jc fs6 pd1">
+          Перевод печатного текста в
+          <span class="gradient-text">рукописный</span>
+        </h1>
+        <div class="w100 f2 df fdc gap4 text-generator">
+          <input
+            class="w100 px2 rd20"
+            type="text"
+            name="text"
+            placeholder="Введите текст, который хотите перевести в рукописную версию"
+          />
+          <div class="w100 df fww gap4 text-options">
+            <div class="rd20 fonts"></div>
+            <div class="rd20 parametrs"></div>
+            <div class="rd20 types"></div>
+          </div>
+        </div>
+        <div class="f1 df fdc aic rd20 text-result">
+          <p>
+            Этот текст-заполнитель показывает, как будет выглядеть ваш текст,
+            преобразованный в рукописный формат. Введите любой текст в поле
+            слева, чтобы увидеть, как он появится здесь, на листке бумаги. <br> Вы
+            можете выбрать различные стили листа и настроить внешний вид вашего
+            рукописного текста. <br> Когда вы будете довольны результатом, просто
+            скачайте документ...
+          </p>
+          <button class="black-button">Все страницы</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="../script.js"></script>
+</html>

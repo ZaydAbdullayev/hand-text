@@ -1,0 +1,231 @@
+@font-face {
+  font-family: "Myriad Pro";
+  src: url("../fonts/myriad-pro/MYRIADPRO-BOLD.OTF") format("opentype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Myriad Pro";
+  src: url("../fonts/myriad-pro/MyriadPro-Light.otf") format("opentype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Vasek";
+  src: url("../fonts/Vasek\ Italic.ttf") format("truetype");
+  font-weight: 400;
+}
+
+:root {
+  --fs1: 1.2rem; /* 1.2rem = 12px */
+  --fs2: 1.4rem; /* 1.4rem = 14px */
+  --fs3: 1.6rem; /* 1.6rem = 16px */
+  --fs4: 1.8rem; /* 1.8rem = 18px */
+  --fs5: 2rem; /* 2rem = 20px */
+  --fs6: 2.2rem; /* 2.2rem = 22px */
+  --fs7: 2.4rem; /* 2.4rem = 24px */
+  --fs8: 2.6rem; /* 2.6rem = 26px */
+  --fs9: 2.8rem; /* 2.8rem = 28px */
+  --fs10: 3rem; /* 3rem = 30px */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Myriad Pro", sans-serif;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.h100 {
+  height: 100%;
+}
+
+.f1 {
+  flex: 1;
+}
+
+.f2 {
+  flex: 2;
+}
+
+.f3 {
+  flex: 3;
+}
+
+.df {
+  display: flex;
+}
+
+.aic {
+  align-items: center;
+}
+
+.jc {
+  justify-content: center;
+}
+
+.jcsb {
+  justify-content: space-between;
+}
+
+.fdc {
+  flex-direction: column;
+}
+
+.fww {
+  flex-wrap: wrap;
+}
+
+.gap1 {
+  gap: 5px;
+}
+
+.gap2 {
+  gap: 10px;
+}
+
+.gap3 {
+  gap: 15px;
+}
+
+.gap4 {
+  gap: 20px;
+}
+
+.gap5 {
+  gap: 25px;
+}
+
+.gap6 {
+  gap: 30px;
+}
+
+.pd1 {
+  padding: 5px;
+}
+
+.pd2 {
+  padding: 10px;
+}
+
+.px1 {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.px2 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.px3 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.px4 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.px5 {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.py1 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.py2 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.py3 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.py4 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.py5 {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.pt1 {
+  padding-top: 5px;
+}
+
+.pt2 {
+  padding-top: 10px;
+}
+
+.pb1 {
+  padding-bottom: 5px;
+}
+
+.pb2 {
+  padding-bottom: 10px;
+}
+
+.fs1 {
+  font-size: var(--fs1);
+}
+
+.fs2 {
+  font-size: var(--fs2);
+}
+
+.fs3 {
+  font-size: var(--fs3);
+}
+
+.fs4 {
+  font-size: var(--fs4);
+}
+
+.fs5 {
+  font-size: var(--fs5);
+}
+
+.fs6 {
+  font-size: var(--fs6);
+}
+
+.fs7 {
+  font-size: var(--fs7);
+}
+
+.fs8 {
+  font-size: var(--fs8);
+}
+
+.fs9 {
+  font-size: var(--fs9);
+}
+
+.fs10 {
+  font-size: var(--fs10);
+}
+
+.rd5 {
+  border-radius: 5px;
+}
+
+.rd10 {
+  border-radius: 10px;
+}
+
+.rd20 {
+  border-radius: 20px;
+}
