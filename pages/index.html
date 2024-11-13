@@ -36,28 +36,90 @@
           <span class="gradient-text">рукописный</span>
         </h1>
         <div class="w100 f2 df fdc gap4 text-generator">
-          <input
-            class="w100 px2 rd20"
-            type="text"
+          <textarea
+            class="w100 px4 py4 rd10"
             name="text"
             placeholder="Введите текст, который хотите перевести в рукописную версию"
-          />
-          <div class="w100 df fww gap4 text-options">
-            <div class="rd20 fonts"></div>
-            <div class="rd20 parametrs"></div>
-            <div class="rd20 types"></div>
+          ></textarea>
+          <div class="w100 gap4 text-options">
+            <div class="rd10 fonts">
+              <label>
+                <p class="font-family1">Шрифт №1</p>
+                <input type="radio" name="font" value="font-family1" />
+              </label>
+              <label>
+                <p class="font-family2">Шрифт №2</p>
+                <input type="radio" name="font" value="font-family2" />
+              </label>
+              <label>
+                <p class="font-family3">Шрифт №3</p>
+                <input type="radio" name="font" value="font-family3" />
+              </label>
+              <label>
+                <p class="font-family4">Шрифт №4</p>
+                <input type="radio" name="font" value="font-family4" />
+              </label>
+              <label>
+                <p class="font-family5">Шрифт №5</p>
+                <input type="radio" name="font" value="font-family5" />
+              </label>
+              <label>
+                <p class="font-family6">Шрифт №6</p>
+                <input type="radio" name="font" value="font-family6" />
+              </label>
+              <label>
+                <p class="font-family1">Шрифт №1</p>
+                <input type="radio" name="font" value="font-family1" />
+              </label>
+              <label>
+                <p class="font-family2">Шрифт №2</p>
+                <input type="radio" name="font" value="font-family2" />
+              </label>
+              <label>
+                <p class="font-family3">Шрифт №3</p>
+                <input type="radio" name="font" value="font-family3" />
+              </label>
+              <label>
+                <p class="font-family4">Шрифт №4</p>
+                <input type="radio" name="font" value="font-family4" />
+              </label>
+              <label>
+                <p class="font-family5">Шрифт №5</p>
+                <input type="radio" name="font" value="font-family5" />
+              </label>
+              <label>
+                <p class="font-family6">Шрифт №6</p>
+                <input type="radio" name="font" value="font-family6" />
+              </label>
+            </div>
+            <div class="rd10 parametrs"></div>
+            <div class="rd10 types">eqwewq</div>
           </div>
         </div>
-        <div class="f1 df fdc aic rd20 text-result">
-          <p>
-            Этот текст-заполнитель показывает, как будет выглядеть ваш текст,
-            преобразованный в рукописный формат. Введите любой текст в поле
-            слева, чтобы увидеть, как он появится здесь, на листке бумаги. <br> Вы
-            можете выбрать различные стили листа и настроить внешний вид вашего
-            рукописного текста. <br> Когда вы будете довольны результатом, просто
-            скачайте документ...
-          </p>
-          <button class="black-button">Все страницы</button>
+        <div class="f1 df fdc gap4 text-result">
+          <div class="f1 rd10 _result-body">
+            <p>
+              Этот текст-заполнитель показывает, как будет выглядеть ваш текст,
+              преобразованный в рукописный формат. Введите любой текст в поле
+              слева, чтобы увидеть, как он появится здесь, на листке бумаги.
+              <br />
+              Вы можете выбрать различные стили листа и настроить внешний вид
+              вашего рукописного текста. <br />
+              Когда вы будете довольны результатом, просто скачайте документ...
+            </p>
+            <button class="black-button df aic gap2">
+              Все страницы <i class="fa-solid fa-arrow-pointer"></i>
+            </button>
+          </div>
+          <div class="df aic gap4 _result-footer">
+            <div class="f3 rd10 df aic gap2 px4 py3 fs1 _footer-options">
+              <p class="f2 df aic jc rd5 cp active">Результат</p>
+              <p class="f3 df aic jc rd5 cp">История генераций</p>
+            </div>
+            <button class="f2 df aic jc gap2 black-button">
+              Скачать <i class="fa-solid fa-lock"></i>
+            </button>
+          </div>
         </div>
       </div>
     </div>

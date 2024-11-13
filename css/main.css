@@ -19,29 +19,76 @@
   }
 }
 
-.text-generator > * {
+.text-generator > textarea {
+  max-height: 180px;
+  min-height: 180px;
   background: #fff;
 }
 
-.text-generator > input {
-  height: 180px;
-  text-align: start;
-  border: none;
-}
-
-.text-generator > input::placeholder {
+.text-generator > textarea::placeholder {
   color: #0005;
-  position: absolute;
-  top: 25px;
-  left: 25px;
 }
 
-.text-result {
+.text-generator > textarea::-webkit-resizer {
+  display: none;
+}
+
+.text-options {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  /* grid-area: satır-başlangıç / sütun-başlangıç / satır-bitiş / sütun-bitiş; */
+
+  > .fonts {
+    grid-area: 1 / 1 / 2 / 3;
+    background: #fff;
+  }
+
+  > .parametrs {
+    grid-area: 1 / 3 / 2 / 6;
+    background: #fff;
+  }
+
+  > .types {
+    height: 70px;
+    grid-area: 2 / 1 / 3 / 6;
+    background: #fff;
+  }
+}
+
+._result-body {
+  position: relative;
   background: #fff;
   padding: 30px;
   > p {
     font-family: "Vasek";
     font-size: var(--fs6);
-    color: #0035E2;
+    color: #0035e2;
+  }
+
+  > button {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    bottom: 30px;
+  }
+}
+
+._result-footer {
+  height: 70px;
+  
+  > ._footer-options {
+    position: relative;
+    height: 100%;
+    background: #fff;
+
+    > p.active {
+      height: 100%;
+      background: #000;
+      color: #fff;
+    }
+  }
+
+  > button {
+    opacity: 0.2;
   }
 }

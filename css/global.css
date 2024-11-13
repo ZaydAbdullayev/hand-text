@@ -17,16 +17,16 @@
 }
 
 :root {
-  --fs1: 1.2rem; /* 1.2rem = 12px */
-  --fs2: 1.4rem; /* 1.4rem = 14px */
-  --fs3: 1.6rem; /* 1.6rem = 16px */
-  --fs4: 1.8rem; /* 1.8rem = 18px */
-  --fs5: 2rem; /* 2rem = 20px */
-  --fs6: 2.2rem; /* 2.2rem = 22px */
-  --fs7: 2.4rem; /* 2.4rem = 24px */
-  --fs8: 2.6rem; /* 2.6rem = 26px */
-  --fs9: 2.8rem; /* 2.8rem = 28px */
-  --fs10: 3rem; /* 3rem = 30px */
+  --fs1: 12px;
+  --fs2: 14px;
+  --fs3: 16px;
+  --fs4: 18px;
+  --fs5: 20px;
+  --fs6: 22px;
+  --fs7: 24px;
+  --fs8: 26px;
+  --fs9: 28px;
+  --fs10: 30px;
 }
 
 * {
@@ -36,12 +36,24 @@
   font-family: "Myriad Pro", sans-serif;
 }
 
+button {
+  cursor: pointer;
+}
+
+input,
+textarea {
+  border: none;
+  outline: none;
+}
 .w100 {
   width: 100%;
 }
 
 .h100 {
   height: 100%;
+}
+.cp {
+  cursor: pointer;
 }
 
 .f1 {
