@@ -1,128 +1,339 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/global.css" />
-    <link rel="stylesheet" href="../css/component.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <title>Hand Text</title>
-  </head>
-  <body>
-    <div class="w100 df fdc aic gap6 wrapper">
-      <nav class="w100 df aic jcsb px5 navbar">
-        <div class="f1 df aic gap6 _left">
-          <figure class="df aic jcc logo"></figure>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/component.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Hand Text</title>
+</head>
+
+<body>
+  <div class="w100 df fdc aic gap6 wrapper">
+    <nav class="w100 df aic jcsb px5 navbar">
+      <div class="f1 df aic gap6 _left">
+        <figure class="df aic jcc logo"></figure>
+        <a href="#">Перевод текста</a>
+        <a href="#">Для кого </a>
+        <a href="#">Примеры</a>
+      </div>
+      <div class="df aic gap2 _right">
+        <button class="bordered-button">Войти</button>
+        <button class="black-button">Зарегистрироваться</button>
+      </div>
+    </nav>
+
+    <div class="w100 df fww gap4 hero">
+      <h1 class="w100 df aic jc fs6 pd1">
+        Перевод печатного текста в
+        <span class="gradient-text">рукописный</span>
+      </h1>
+      <div class="w100 f2 df fdc gap4 text-generator">
+        <textarea class="w100 px4 py4 rd10" name="text"
+          placeholder="Введите текст, который хотите перевести в рукописную версию"></textarea>
+        <div class="w100 gap4 text-options">
+          <div class="rd10 fonts">
+            <label>
+              <p class="font-family1">Шрифт №1</p>
+              <input type="radio" name="font" value="font-family1" />
+            </label>
+            <label>
+              <p class="font-family2">Шрифт №2</p>
+              <input type="radio" name="font" value="font-family2" />
+            </label>
+            <label>
+              <p class="font-family3">Шрифт №3</p>
+              <input type="radio" name="font" value="font-family3" />
+            </label>
+            <label>
+              <p class="font-family4">Шрифт №4</p>
+              <input type="radio" name="font" value="font-family4" />
+            </label>
+            <label>
+              <p class="font-family5">Шрифт №5</p>
+              <input type="radio" name="font" value="font-family5" />
+            </label>
+            <label>
+              <p class="font-family6">Шрифт №6</p>
+              <input type="radio" name="font" value="font-family6" />
+            </label>
+            <label>
+              <p class="font-family1">Шрифт №1</p>
+              <input type="radio" name="font" value="font-family1" />
+            </label>
+            <label>
+              <p class="font-family2">Шрифт №2</p>
+              <input type="radio" name="font" value="font-family2" />
+            </label>
+            <label>
+              <p class="font-family3">Шрифт №3</p>
+              <input type="radio" name="font" value="font-family3" />
+            </label>
+            <label>
+              <p class="font-family4">Шрифт №4</p>
+              <input type="radio" name="font" value="font-family4" />
+            </label>
+            <label>
+              <p class="font-family5">Шрифт №5</p>
+              <input type="radio" name="font" value="font-family5" />
+            </label>
+            <label>
+              <p class="font-family6">Шрифт №6</p>
+              <input type="radio" name="font" value="font-family6" />
+            </label>
+          </div>
+          <div class="rd10 parametrs">
+            <span>A</span>
+            <i class="fa-solid fa-fill-drip"></i>
+            <i class="fa-solid fa-droplet-slash"></i>
+            <del>T</del>
+            <span>U</span>
+            <i>T</i>
+            <i class="fa-solid fa-circle-check"></i>
+          
+            <div class="df aic gap3 range-slider">
+              <input class="range-slider__range" type="range" name="font-size" max="24" min="10" value="14" /><span
+                class="fs2 range-slider__value">0</span>
+              <div class="df fdc aic gap fs1 counter">
+                <i class="fa-solid fa-angle-up cp"></i>
+                <i class="fa-solid fa-angle-down cp"></i>
+              </div>
+            </div>
+          </div>
+          <div class="types w100 rd10 df aic jcsb fs2">
+            <p>Выберите фон для текста или загрузите свой</p>
+            <div class="df aic gap2 _type-contents">
+              <label class="cp bg-type rd10">
+                <img class="w100 h100" src="../imgs/image-1.png" alt="bg1" />
+                <input type="radio" name="bg-type" />
+              </label>
+              <label class="cp bg-type rd10">
+                <img class="w100 h100" src="../imgs/image.png" alt="bg1" />
+                <input type="radio" name="bg-type" />
+              </label>
+              <label class="cp bg-type rd10">
+                <img class="w100 h100" src="../imgs/image-3.png" alt="bg1" />
+                <input type="radio" name="bg-type" />
+              </label>
+              <label class="cp df aic jc bg-type rd10 new-upload">
+                <img src="../imgs/Icons.svg" alt="" />
+                <input type="file" name="bg" id="upload-bg-img" />
+              </label>
+            </div>
+          </div>
+          </div>
+          </div>
+          <div class="f1 df fdc gap4 text-result">
+            <div class="f1 rd10 _result-body">
+              <p>
+                Этот текст-заполнитель показывает, как будет выглядеть ваш текст,
+                преобразованный в рукописный формат. Введите любой текст в поле
+                слева, чтобы увидеть, как он появится здесь, на листке бумаги.
+                <br />
+                Вы можете выбрать различные стили листа и настроить внешний вид
+                вашего рукописного текста. <br />
+                Когда вы будете довольны результатом, просто скачайте документ...
+              </p>
+              <button class="black-button df aic gap2">
+                Все страницы <i class="fa-solid fa-arrow-pointer"></i>
+              </button>
+            </div>
+            <div class="df aic gap4 _result-footer">
+              <div class="f3 rd10 df aic gap2 px4 py3 fs1 _footer-options">
+                <p class="f2 df aic jc rd5 cp active">Результат</p>
+                <p class="f3 df aic jc rd5 cp">История генераций</p>
+              </div>
+          <button class="df aic jc gap2 black-button small-x">
+            Скачать <i class="fa-solid fa-lock"></i>
+          </button>
+          </div>
+          </div>
+          </div>
+    <div class="w100 df fdc aic gap6 example-templates">
+      <h5 class="fs7 py2">Примеры рукописного текста</h5>
+      <div class="w100 df aic gap6 slider-container">
+        <div class="df aic jc slide-btn">
+          <span class="df aic jc fs2 cp" id="prev-slide">
+            <i class="fa-solid fa-angle-left"></i>
+          </span>
+        </div>
+        <div class="f1 df slider">
+          <figure class="df fdc aic gap3 slider-item">
+            <div class="w100 rd10 slide-img-box">
+              <img src="../imgs/file-0.png" class="rd10" alt="example" />
+              <div class="w100 h100 df aic jc gap4 more-imgs">
+                <img src="../imgs/file-0.png" class="rd10" alt="example" />
+                <img src="../imgs/file-0.png" class="rd10" alt="example" />
+    
+              </div>
+            </div>
+            <figcaption class="w100 df fdc fs1 rd10 gap1">
+              <p class="df aic gap2 fs2">
+                <b>Ольга</b> <span>Функции белков в организме</span>
+              </p>
+              <span>
+                Получился очень понятный и аккуратный конспект.
+                Преобразованный текст выглядит как написанный вручную, что
+                делает его удобным для чтения и запоминания.
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="df fdc aic gap3 slider-item">
+            <div class="w100 rd10 slide-img-box">
+              <img src="../imgs/file-1.png" class="rd10" alt="example" />
+              <div class="w100 h100 df aic jc gap4 more-imgs">
+                <img src="../imgs/file-1.png" class="rd10" alt="example" />
+                <img src="../imgs/file-1.png" class="rd10" alt="example" />
+              </div>
+            </div>
+            <figcaption class="w100 df fdc fs1 rd10 gap1">
+              <p class="df aic gap2 fs2">
+                <b>Ольга</b> <span>Функции белков в организме</span>
+              </p>
+              <span>
+                Получился очень понятный и аккуратный конспект.
+                Преобразованный текст выглядит как написанный вручную, что
+                делает его удобным для чтения и запоминания.
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="df fdc aic gap3 slider-item">
+            <div class="w100 rd10 slide-img-box">
+              <img src="../imgs/file-2.png" class="rd10" alt="example" />
+              <div class="w100 h100 df aic jc gap4 more-imgs">
+                <img src="../imgs/file-2.png" class="rd10" alt="example" />
+                <img src="../imgs/file-2.png" class="rd10" alt="example" />
+              </div>
+            </div>
+            <figcaption class="w100 df fdc fs1 rd10 gap1">
+              <p class="df aic gap2 fs2">
+                <b>Ольга</b> <span>Функции белков в организме</span>
+              </p>
+              <span>
+                Получился очень понятный и аккуратный конспект.
+                Преобразованный текст выглядит как написанный вручную, что
+                делает его удобным для чтения и запоминания.
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="df fdc aic gap3 slider-item">
+            <div class="w100 rd10 slide-img-box">
+              <img src="../imgs/Image - 4.png" class="rd10" alt="example" />
+              <div class="w100 h100 df aic jc gap4 more-imgs">
+                <img src="../imgs/Image - 4.png" class="rd10" alt="example" />
+                <img src="../imgs/Image - 4.png" class="rd10" alt="example" />
+              </div>
+            </div>
+            <figcaption class="w100 df fdc fs1 rd10 gap1">
+              <p class="df aic gap2 fs2">
+                <b>Ольга</b> <span>Функции белков в организме</span>
+              </p>
+              <span>
+                Получился очень понятный и аккуратный конспект.
+                Преобразованный текст выглядит как написанный вручную, что
+                делает его удобным для чтения и запоминания.
+              </span>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="df aic jc slide-btn">
+          <span class="df aic jc fs2 cp" id="next-slide">
+            <i class="fa-solid fa-angle-right"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="w100 df fdc aic gap6 generation-info">
+      <h1 class="w100 df aic jc gap1 fs6 pd1">
+        Для тех, кому <span class="gradient-text"> лень </span> писать вручную
+      </h1>
+      <div class="w100 df aic fww gap3 info-body">
+        <figure class="df fdc aic gap2 info-item">
+          <img class="rd10" src="../imgs/Img.png" alt="info" />
+          <figcaption class="w100 df fdc gap2 rd10">
+            <p class="fs2">Студенты и школьники</p>
+            <span class="fs1">Надоело переписывать учебные материалы от руки? Понимаем!Теперь
+              у тебя есть простой выход из ситуации 😎</span>
+          </figcaption>
+        </figure>
+        <figure class="df fdc aic gap2 info-item">
+          <img class="rd10" src="../imgs/Img-1.png" alt="info" />
+          <figcaption class="w100 df fdc gap2 rd10">
+            <p class="fs2">Студенты и школьники</p>
+            <span class="fs1">Надоело переписывать учебные материалы от руки? Понимаем!Теперь
+              у тебя есть простой выход из ситуации 😎</span>
+          </figcaption>
+        </figure>
+        <figure class="df fdc aic gap2 info-item">
+          <img class="rd10" src="../imgs/Img-2.png" alt="info" />
+          <figcaption class="w100 df fdc gap2 rd10">
+            <p class="fs2">Студенты и школьники</p>
+            <span class="fs1">Надоело переписывать учебные материалы от руки? Понимаем!Теперь
+              у тебя есть простой выход из ситуации 😎</span>
+          </figcaption>
+        </figure>
+        <figure class="df fdc aic gap2 info-item">
+          <img class="rd10" src="../imgs/Img-3.png" alt="info" />
+          <figcaption class="w100 df fdc gap2 rd10">
+            <p class="fs2">Студенты и школьники</p>
+            <span class="fs1">Надоело переписывать учебные материалы от руки? Понимаем!Теперь
+              у тебя есть простой выход из ситуации 😎</span>
+          </figcaption>
+        </figure>
+        <figure class="df fdc aic gap2 info-item">
+          <img class="rd10" src="../imgs/Img-4.png" alt="info" />
+          <figcaption class="w100 df fdc gap2 rd10">
+            <p class="fs2">Студенты и школьники</p>
+            <span class="fs1">Надоело переписывать учебные материалы от руки? Понимаем!Теперь
+              у тебя есть простой выход из ситуации 😎</span>
+          </figcaption>
+        </figure>
+        <figure class="df fdc aic gap2 info-item">
+          <img class="rd10" src="../imgs/Img-5.png" alt="info" />
+          <figcaption class="w100 df fdc gap2 rd10">
+            <p class="fs2">Студенты и школьники</p>
+            <div class="df aic">
+              <span class="fs1">
+                Результат за секунду. Переводи текст в рукописный и
+                наслаждайся результатом
+              </span>
+              <button class="black-button small fs05">Зарегистрироваться</button>
+            </div>
+      </div>
+      </figcaption>
+      </figure>
+    </div>
+    <footer class="w100 df jcsb rd10 footer">
+      <div class="df footer-left-section fs1">
+        <div class="df fdc gap2">
+          <span class="logo-footer"></span>
+          <span class="fs05" style="opacity: 0.5">© Hand Text 2024</span>
+        </div>
+        <div class="df fdc gap3">
           <a href="#">Перевод текста</a>
           <a href="#">Для кого </a>
           <a href="#">Примеры</a>
         </div>
-        <div class="df aic gap2 _right">
-          <button class="bordered-button">Войти</button>
-          <button class="black-button">Зарегистрироваться</button>
-        </div>
-      </nav>
-
-      <div class="w100 df fww gap4 hero">
-        <h1 class="w100 df aic jc fs6 pd1">
-          Перевод печатного текста в
-          <span class="gradient-text">рукописный</span>
-        </h1>
-        <div class="w100 f2 df fdc gap4 text-generator">
-          <textarea
-            class="w100 px4 py4 rd10"
-            name="text"
-            placeholder="Введите текст, который хотите перевести в рукописную версию"
-          ></textarea>
-          <div class="w100 gap4 text-options">
-            <div class="rd10 fonts">
-              <label>
-                <p class="font-family1">Шрифт №1</p>
-                <input type="radio" name="font" value="font-family1" />
-              </label>
-              <label>
-                <p class="font-family2">Шрифт №2</p>
-                <input type="radio" name="font" value="font-family2" />
-              </label>
-              <label>
-                <p class="font-family3">Шрифт №3</p>
-                <input type="radio" name="font" value="font-family3" />
-              </label>
-              <label>
-                <p class="font-family4">Шрифт №4</p>
-                <input type="radio" name="font" value="font-family4" />
-              </label>
-              <label>
-                <p class="font-family5">Шрифт №5</p>
-                <input type="radio" name="font" value="font-family5" />
-              </label>
-              <label>
-                <p class="font-family6">Шрифт №6</p>
-                <input type="radio" name="font" value="font-family6" />
-              </label>
-              <label>
-                <p class="font-family1">Шрифт №1</p>
-                <input type="radio" name="font" value="font-family1" />
-              </label>
-              <label>
-                <p class="font-family2">Шрифт №2</p>
-                <input type="radio" name="font" value="font-family2" />
-              </label>
-              <label>
-                <p class="font-family3">Шрифт №3</p>
-                <input type="radio" name="font" value="font-family3" />
-              </label>
-              <label>
-                <p class="font-family4">Шрифт №4</p>
-                <input type="radio" name="font" value="font-family4" />
-              </label>
-              <label>
-                <p class="font-family5">Шрифт №5</p>
-                <input type="radio" name="font" value="font-family5" />
-              </label>
-              <label>
-                <p class="font-family6">Шрифт №6</p>
-                <input type="radio" name="font" value="font-family6" />
-              </label>
-            </div>
-            <div class="rd10 parametrs"></div>
-            <div class="rd10 types">eqwewq</div>
-          </div>
-        </div>
-        <div class="f1 df fdc gap4 text-result">
-          <div class="f1 rd10 _result-body">
-            <p>
-              Этот текст-заполнитель показывает, как будет выглядеть ваш текст,
-              преобразованный в рукописный формат. Введите любой текст в поле
-              слева, чтобы увидеть, как он появится здесь, на листке бумаги.
-              <br />
-              Вы можете выбрать различные стили листа и настроить внешний вид
-              вашего рукописного текста. <br />
-              Когда вы будете довольны результатом, просто скачайте документ...
-            </p>
-            <button class="black-button df aic gap2">
-              Все страницы <i class="fa-solid fa-arrow-pointer"></i>
-            </button>
-          </div>
-          <div class="df aic gap4 _result-footer">
-            <div class="f3 rd10 df aic gap2 px4 py3 fs1 _footer-options">
-              <p class="f2 df aic jc rd5 cp active">Результат</p>
-              <p class="f3 df aic jc rd5 cp">История генераций</p>
-            </div>
-            <button class="f2 df aic jc gap2 black-button">
-              Скачать <i class="fa-solid fa-lock"></i>
-            </button>
-          </div>
+        <div class="df fdc gap3">
+          <a href="#">Условия использования</a>
+          <a href="#">Политика конфиденциальности</a>
+          <a href="#">Отписаться от услуг</a>
         </div>
       </div>
+      <div class="df aic gap3">
+        <button class="black-button border-white fs1">Войти</button>
+        <button class="bordered-button border-white fs1">Зарегистрироваться</button>
+      </div>
+    </footer>
     </div>
+  </div>
   </body>
   <script src="../script.js"></script>
+<script src="../slider.js"></script>
+
 </html>
