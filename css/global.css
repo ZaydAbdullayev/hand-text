@@ -10,7 +10,6 @@
   font-weight: 300;
 }
 
-
 @font-face {
   font-family: "Myriad Pro";
   src: url("../fonts/myriad-pro/MYRIADPRO-REGULAR.OTF") format("opentype");
@@ -35,6 +34,7 @@
   --fs8: 26px;
   --fs9: 28px;
   --fs10: 30px;
+  --fs11: 35px;
 }
 
 * {
@@ -55,7 +55,7 @@ textarea {
   outline: none;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
@@ -204,7 +204,7 @@ a{
   padding-bottom: 10px;
 }
 
-.fs05{
+.fs05 {
   font-size: var(--fs05);
 }
 
@@ -248,6 +248,10 @@ a{
   font-size: var(--fs10);
 }
 
+.fs11 {
+  font-size: var(--fs11);
+}
+
 .rd5 {
   border-radius: 5px;
 }
@@ -258,6 +262,12 @@ a{
 
 .rd20 {
   border-radius: 20px;
+}
+
+.wrapper {
+  min-height: 100dvh;
+  background: #f5f5f7;
+  padding: 30px 120px;
 }
 
 .navbar {
@@ -275,7 +285,7 @@ a{
   }
 }
 
-.footer{
+.footer {
   margin-top: 30px;
   padding: 2% 2% 3%;
   align-items: flex-start;
@@ -283,12 +293,12 @@ a{
   background: #000;
 }
 
-.footer a{
+.footer div > a {
   color: #fff;
   opacity: 0.8;
   font-weight: 400;
 }
 
-.footer-left-section{
+.footer-left-section {
   gap: 50px;
 }

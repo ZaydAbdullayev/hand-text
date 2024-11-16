@@ -22,7 +22,6 @@ prevBtn.addEventListener('click', () => {
 
 const more_imgs = document.querySelectorAll('.more-imgs');
 more_imgs.forEach(item => {
-    console.log(item);
     const slider_fullscreen = item.querySelector('#fullscreen-slider');
     const nextBtn_fullscreen = item.querySelector('#next-slide-fullscreen');
     const prevBtn_fullscreen = item.querySelector('#prev-slide-fullscreen');
