@@ -95,7 +95,7 @@
             <span>U</span>
             <i>T</i>
             <i class="fa-solid fa-circle-check"></i>
-          
+
             <div class="df aic gap3 range-slider">
               <input class="range-slider__range" type="range" name="font-size" max="24" min="10" value="14" /><span
                 class="fs2 range-slider__value">0</span>
@@ -126,34 +126,34 @@
               </label>
             </div>
           </div>
+        </div>
+        </div>
+        <div class="f1 df fdc gap4 text-result">
+          <div class="f1 rd10 _result-body">
+            <p>
+              Этот текст-заполнитель показывает, как будет выглядеть ваш текст,
+              преобразованный в рукописный формат. Введите любой текст в поле
+              слева, чтобы увидеть, как он появится здесь, на листке бумаги.
+              <br />
+              Вы можете выбрать различные стили листа и настроить внешний вид
+              вашего рукописного текста. <br />
+              Когда вы будете довольны результатом, просто скачайте документ...
+            </p>
+            <button class="black-button df aic gap2">
+              Все страницы <i class="fa-solid fa-arrow-pointer"></i>
+            </button>
           </div>
-          </div>
-          <div class="f1 df fdc gap4 text-result">
-            <div class="f1 rd10 _result-body">
-              <p>
-                Этот текст-заполнитель показывает, как будет выглядеть ваш текст,
-                преобразованный в рукописный формат. Введите любой текст в поле
-                слева, чтобы увидеть, как он появится здесь, на листке бумаги.
-                <br />
-                Вы можете выбрать различные стили листа и настроить внешний вид
-                вашего рукописного текста. <br />
-                Когда вы будете довольны результатом, просто скачайте документ...
-              </p>
-              <button class="black-button df aic gap2">
-                Все страницы <i class="fa-solid fa-arrow-pointer"></i>
-              </button>
+          <div class="df aic gap4 _result-footer">
+            <div class="f3 rd10 df aic gap2 px4 py3 fs1 _footer-options">
+              <p class="f2 df aic jc rd5 cp active">Результат</p>
+              <p class="f3 df aic jc rd5 cp">История генераций</p>
             </div>
-            <div class="df aic gap4 _result-footer">
-              <div class="f3 rd10 df aic gap2 px4 py3 fs1 _footer-options">
-                <p class="f2 df aic jc rd5 cp active">Результат</p>
-                <p class="f3 df aic jc rd5 cp">История генераций</p>
-              </div>
           <button class="df aic jc gap2 black-button small-x">
             Скачать <i class="fa-solid fa-lock"></i>
           </button>
-          </div>
-          </div>
-          </div>
+        </div>
+        </div>
+        </div>
     <div class="w100 df fdc aic gap6 example-templates">
       <h5 class="fs7 py2">Примеры рукописного текста</h5>
       <div class="w100 df aic gap6 slider-container">
@@ -167,9 +167,25 @@
             <div class="w100 rd10 slide-img-box">
               <img src="../imgs/file-0.png" class="rd10" alt="example" />
               <div class="w100 h100 df aic jc gap4 more-imgs">
-                <img src="../imgs/file-0.png" class="rd10" alt="example" />
-                <img src="../imgs/file-0.png" class="rd10" alt="example" />
-    
+                <i class="close"></i>
+                <img src="../imgs/file-0.png" class="rd10 open-fullscreen" alt="example" />
+                <img src="../imgs/file-0.png" class="rd10 open-fullscreen" alt="example" />
+                <div class="df aic jc slide-btn" id="fullscreen-slide-prev">
+                  <span class="df aic jc fs2 cp" id="prev-slide-fullscreen">
+                    <i class="fa-solid fa-angle-left"></i>
+                  </span>
+                </div>
+                <div class="df aic gap6 slider-container-fullscreen">
+                  <div class="f1 df slider-fullscreen" id="fullscreen-slider">
+                    <img src="../imgs/file-0.png" class="rd10 slider-item-fullscreen" alt="example" />
+                    <img src="../imgs/file-0.png" class="rd10 slider-item-fullscreen" alt="example" />
+                  </div>
+                </div>
+                <div class="df aic jc slide-btn" id="fullscreen-slide-next">
+                  <span class="df aic jc fs2 cp" id="next-slide-fullscreen">
+                    <i class="fa-solid fa-angle-right"></i>
+                  </span>
+                </div>
               </div>
             </div>
             <figcaption class="w100 df fdc fs1 rd10 gap1">
@@ -187,8 +203,25 @@
             <div class="w100 rd10 slide-img-box">
               <img src="../imgs/file-1.png" class="rd10" alt="example" />
               <div class="w100 h100 df aic jc gap4 more-imgs">
-                <img src="../imgs/file-1.png" class="rd10" alt="example" />
-                <img src="../imgs/file-1.png" class="rd10" alt="example" />
+                <i class="close"></i>
+                <img src="../imgs/file-1.png" class="rd10 open-fullscreen" alt="example" />
+                <img src="../imgs/file-1.png" class="rd10 open-fullscreen" alt="example" />
+                <div class="df aic jc slide-btn" id="fullscreen-slide-prev">
+                  <span class="df aic jc fs2 cp" id="prev-slide-fullscreen">
+                    <i class="fa-solid fa-angle-left"></i>
+                  </span>
+                </div>
+                <div class="df aic gap6 slider-container-fullscreen">
+                  <div class="f1 df slider-fullscreen" id="fullscreen-slider">
+                    <img src="../imgs/file-1.png" class="rd10 slider-item-fullscreen" alt="example" />
+                    <img src="../imgs/file-1.png" class="rd10 slider-item-fullscreen" alt="example" />
+                  </div>
+                </div>
+                <div class="df aic jc slide-btn" id="fullscreen-slide-next">
+                  <span class="df aic jc fs2 cp" id="next-slide-fullscreen">
+                    <i class="fa-solid fa-angle-right"></i>
+                  </span>
+                </div>
               </div>
             </div>
             <figcaption class="w100 df fdc fs1 rd10 gap1">
@@ -206,8 +239,25 @@
             <div class="w100 rd10 slide-img-box">
               <img src="../imgs/file-2.png" class="rd10" alt="example" />
               <div class="w100 h100 df aic jc gap4 more-imgs">
-                <img src="../imgs/file-2.png" class="rd10" alt="example" />
-                <img src="../imgs/file-2.png" class="rd10" alt="example" />
+                <i class="close"></i>
+                <img src="../imgs/file-2.png" class="rd10 open-fullscreen" alt="example" />
+                <img src="../imgs/file-2.png" class="rd10 open-fullscreen" alt="example" />
+                <div class="df aic jc slide-btn" id="fullscreen-slide-prev">
+                  <span class="df aic jc fs2 cp" id="prev-slide-fullscreen">
+                    <i class="fa-solid fa-angle-left"></i>
+                  </span>
+                </div>
+                <div class="df aic gap6 slider-container-fullscreen">
+                  <div class="f1 df slider-fullscreen" id="fullscreen-slider">
+                    <img src="../imgs/file-2.png" class="rd10 slider-item-fullscreen" alt="example" />
+                    <img src="../imgs/file-2.png" class="rd10 slider-item-fullscreen" alt="example" />
+                  </div>
+                </div>
+                <div class="df aic jc slide-btn" id="fullscreen-slide-next">
+                  <span class="df aic jc fs2 cp" id="next-slide-fullscreen">
+                    <i class="fa-solid fa-angle-right"></i>
+                  </span>
+                </div>
               </div>
             </div>
             <figcaption class="w100 df fdc fs1 rd10 gap1">
@@ -225,8 +275,25 @@
             <div class="w100 rd10 slide-img-box">
               <img src="../imgs/Image - 4.png" class="rd10" alt="example" />
               <div class="w100 h100 df aic jc gap4 more-imgs">
-                <img src="../imgs/Image - 4.png" class="rd10" alt="example" />
-                <img src="../imgs/Image - 4.png" class="rd10" alt="example" />
+                <i class="close"></i>
+                <img src="../imgs/Image - 4.png" class="rd10 open-fullscreen" alt="example" />
+                <img src="../imgs/Image - 4.png" class="rd10 open-fullscreen" alt="example" />
+                <div class="df aic jc slide-btn" id="fullscreen-slide-prev">
+                  <span class="df aic jc fs2 cp" id="prev-slide-fullscreen">
+                    <i class="fa-solid fa-angle-left"></i>
+                  </span>
+                </div>
+                <div class="df aic gap6 slider-container-fullscreen">
+                  <div class="f1 df slider-fullscreen" id="fullscreen-slider">
+                    <img src="../imgs/Image - 4.png" class="rd10 slider-item-fullscreen" alt="example" />
+                    <img src="../imgs/Image - 4.png" class="rd10 slider-item-fullscreen" alt="example" />
+                  </div>
+                </div>
+                <div class="df aic jc slide-btn" id="fullscreen-slide-next">
+                  <span class="df aic jc fs2 cp" id="next-slide-fullscreen">
+                    <i class="fa-solid fa-angle-right"></i>
+                  </span>
+                </div>
               </div>
             </div>
             <figcaption class="w100 df fdc fs1 rd10 gap1">
@@ -330,10 +397,10 @@
         <button class="bordered-button border-white fs1">Зарегистрироваться</button>
       </div>
     </footer>
-    </div>
   </div>
-  </body>
-  <script src="../script.js"></script>
+  </div>
+</body>
+<script src="../script.js"></script>
 <script src="../slider.js"></script>
 
 </html>
