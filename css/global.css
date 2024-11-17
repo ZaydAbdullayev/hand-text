@@ -22,6 +22,30 @@
   font-weight: 400;
 }
 
+@font-face {
+  font-family: "Caveat";
+  src: url("../fonts/Caveat-VariableFont_wght.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "StreetbrushW01-Regular";
+  src: url("../fonts/streetbrushw01_regular.otf") format("opentype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "VoronovFont";
+  src: url("../fonts/Voronov.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Yahfie";
+  src: url("../fonts/Yahfie-Normal.ttf") format("truetype");
+  font-weight: 400;
+}
+
 :root {
   --fs05: 10px;
   --fs1: 12px;
@@ -34,7 +58,8 @@
   --fs8: 26px;
   --fs9: 28px;
   --fs10: 30px;
-  --fs11: 35px;
+  --fs11: 34px;
+  --fs12: 44px;
 }
 
 * {
@@ -80,6 +105,34 @@ a {
 
 .f3 {
   flex: 3;
+}
+
+.f50 {
+  flex: 0 0 calc(50% - 13px);
+}
+
+.o03 {
+  opacity: 0.3;
+}
+
+.o04 {
+  opacity: 0.4;
+}
+
+.o05 {
+  opacity: 0.5;
+}
+
+.o06 {
+  opacity: 0.6;
+}
+
+.o07 {
+  opacity: 0.7;
+}
+
+.o08 {
+  opacity: 0.8;
 }
 
 .df {
@@ -138,6 +191,14 @@ a {
   padding: 10px;
 }
 
+.pd3 {
+  padding: 15px;
+}
+
+.pd4 {
+  padding: 20px;
+}
+
 .px1 {
   padding-left: 5px;
   padding-right: 5px;
@@ -163,6 +224,11 @@ a {
   padding-right: 25px;
 }
 
+.px6 {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
 .py1 {
   padding-top: 5px;
   padding-bottom: 5px;
@@ -186,6 +252,11 @@ a {
 .py5 {
   padding-top: 25px;
   padding-bottom: 25px;
+}
+
+.py6 {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .pt1 {
@@ -252,6 +323,22 @@ a {
   font-size: var(--fs11);
 }
 
+.fs12 {
+  font-size: var(--fs12);
+}
+
+.fw3 {
+  font-weight: 300;
+}
+
+.fw4 {
+  font-weight: 400;
+}
+
+.fw6 {
+  font-weight: 600;
+}
+
 .rd5 {
   border-radius: 5px;
 }
@@ -260,8 +347,17 @@ a {
   border-radius: 10px;
 }
 
+.rd15 {
+  border-radius: 15px;
+}
+
 .rd20 {
   border-radius: 20px;
+}
+
+.shadow08 {
+  background: #fff;
+  box-shadow: 0px 5px 20px 0px #00000008;
 }
 
 .wrapper {
