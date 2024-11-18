@@ -12,6 +12,11 @@ const fonts = [
     { font: "Yahfie", font_class: "font-family5" },
     { font: "Myriad Pro", font_class: "font-family6" }
 ];
+let font_option = {
+    'dynamic-letter-size': true,
+    'dynamic-letter-space': true,
+    'dynamic-letter-italic': true,
+};
 
 const text_input = document.querySelector('#text');
 const font_contents = document.querySelector('.font_contents');
@@ -22,7 +27,7 @@ fonts.forEach(({ font_class, font }, index) => {
     font_contents.innerHTML += `
     <label class="w100 pd2 rd5 cp ${font_class} ${index === 0 && "active"}">
       <p>Шрифт ${index + 1}</p>
-      <input type="radio" name="font" value="${font_class}" onchange="getFont('${font_class}')">
+      <input type="radio" name="font" value="${font_class}">
     </label>`;
 });
 
@@ -38,23 +43,46 @@ font_contents.addEventListener('change', (e) => {
     }
 });
 
-function getFont(params) {
-    console.log(params);
-}
+const modifiedText = (text) => {
+    let modifiedText = '';
+    for (let i = 0; i < text.length; i++) {
+        let dynamic_styles = '';
+        const char = text[i];
+        if (font_option['dynamic-letter-size']) {
+            const dynamic_letter_size = Math.floor(Math.random() * 5) + 30;
+            dynamic_styles += `font-size: ${dynamic_letter_size}px; `;
+        } else {
+            dynamic_styles += `font-size: 30px; `;
+        }
+        if (font_option['dynamic-letter-space']) {
+            const dynamic_letter_space = Math.random() * 3;
+            dynamic_styles += `letter-spacing: ${dynamic_letter_space}px; `;
+        }
+        if (font_option['dynamic-letter-italic']) {
+            const dynamic_italic = Math.random() > 0.8 ? 'italic' : 'normal';
+            dynamic_styles += `font-style: ${dynamic_italic}; `;
+        }
+        modifiedText += `<span style="${dynamic_styles}">${char}</span>`;
+    }
+    return modifiedText;
+};
 
+// Kullanıcı metin kutusunu kaybettiğinde (blur eventi)
 text_input.addEventListener("blur", (e) => {
-    console.log(e.target.value?.split('\n'));
-    text_body.innerText = e.target.value;
+    let text = e.target.value;
+    text_body.innerHTML = modifiedText(text);
+    updateStyles();
 });
 
+// Font parametreleri ve slider'ların dinamik olarak render edilmesi
 const font_parametrs = [
     { title: 'Размер шрифта', min: 1, max: 40, unit: "px", value: 24, full_width: true, name: 'font-size' },
     { title: 'Разнообразие букв', min: 0, max: 100, unit: "px", value: 1, full_width: true, name: 'letter-spacing' },
     { title: 'Отступ сверху', min: 0, max: 50, unit: "px", value: 25, name: 'padding-top' },
     { title: 'Отступ снизу', min: 0, max: 50, unit: "px", value: 25, name: 'padding-bottom' },
     { title: 'Отступ слева', min: 0, max: 50, unit: "px", value: 25, name: 'padding-left' },
-    { title: 'Отступ справа', min: 0, max: 50, unit: "px", value: 25, name: 'padding-right' },
     { title: 'Отступ на чёт.стр.', min: 0, max: 50, unit: "px", value: 0, name: 'padding-even' },
+    { title: 'Высота линий', min: 0, max: 30, unit: "px", value: 0, name: 'line-height' },
     { title: 'Ширина контента', min: 0, max: 100, unit: "%", value: 100, name: 'width' }
 ];
 
@@ -79,35 +107,30 @@ const updateStyles = () => {
         slider.addEventListener('input', (event) => {
             const { name, value } = event.target;
             const unit = event.target.getAttribute('data-unit');
+            text_body.style.setProperty(name, value + unit); 
+            let valueDisplay = slider.nextElementSibling;
 
-            // .text-body stilini güncelle
-            text_body.style.setProperty(name, value + unit);
+            if (font_option['dynamic-letter-size'] && name === 'font-size') {
+                const dynamic_letter_size = value + Math.floor(Math.random() * 1);
+                for (let i = 0; i < text_body.children.length; i++) {
+                    text_body.children[i].style.fontSize = dynamic_letter_size + unit;
+                }
+            }
 
-            // if (name === 'padding-even') {
-            //     // Satırlara yalnızca padding-left değeri ekle ya da güncelle
-            //     const lines = text_body.innerHTML.split('\n');
-            //     const updatedLines = lines.map((line, index) => {
-            //         // Çift satırlara padding-left uygula
-            //         if (index % 2 === 1) {
-            //             // Eğer daha önce padding-left uygulanmışsa, sadece güncelle
-            //             const existingPadding = line.match(/padding-left:\s*(\d+)(px|%)?/);
-            //             if (existingPadding) {
-            //                 // Daha önce var olan padding'i güncelle
-            //                 return line.replace(existingPadding[0], `padding-left: ${value}${unit}`);
-            //             } else {
-            //                 // Yeni padding-left ekle
-            //                 return `<span style="display:block; padding-left: ${value}${unit};">${line}</span>`;
-            //             }
-            //         }
-            //         return line;
-            //     });
+            if (font_option['dynamic-letter-space'] && name === 'letter-spacing') {
+                const dynamic_letter_space = value + (Math.random() * 6);
+                for (let i = 0; i < text_body.children.length; i++) {
+                    text_body.children[i].style.letterSpacing = dynamic_letter_space + unit;
+                }
+            }
 
-            //     // Güncellenmiş içeriği yeniden düzenle
-            //     text_body.innerHTML = updatedLines.join('\n');
-            // }
+            if (font_option['dynamic-letter-italic']) {
+                const dynamic_italic = Math.random() > 0.8 ? 'italic' : 'normal';
+                for (let i = 0; i < text_body.children.length; i++) {
+                    text_body.children[i].style.letterSpacing = dynamic_italic
+                }
+            }
 
-            // Slider değeri metnini güncelle
-            const valueDisplay = slider.nextElementSibling;
             if (valueDisplay) {
                 valueDisplay.textContent = value;
             }
@@ -117,6 +140,15 @@ const updateStyles = () => {
 
 updateStyles();
 
+const font_options = document.querySelectorAll('.font-option');
+font_options.forEach(option => {
+    option.addEventListener('click', () => {
+        const optionName = option.getAttribute('data-font-option');
+        font_option[optionName] = !font_option[optionName];
+        option.classList.toggle('active');
+        text_body.innerHTML = modifiedText(text_input.value);
+    });
+});
 
 
 const backgrounds = [
@@ -156,10 +188,4 @@ new_background.addEventListener('change', (e) => {
     reader.readAsDataURL(file);
 });
 
-const font_options = document.querySelectorAll('.font-option');
 
-font_options.forEach(option => {
-    option.addEventListener('click', () => {
-        option.classList.toggle('active');
-    });
-});
