@@ -40,43 +40,65 @@
             <div class="rd10 fonts">
               <div class="w100 h100 df fdc font_contents">
               </div>
-              </div>
+            </div>
             <div class="w100 df fdc rd10 px4 py4 gap5 parametrs">
               <div class="w100 df aic gap3 _parametrs_header">
-                <span>A</span>
-                <i class="fa-solid fa-fill-drip"></i>
+                <div class="text-color tooltip">
+                  <span>A</span>
+                  <div class="df fdc gap1 shadow08 tooltip-body">
+                    <label class="df aic gap1">
+                      <input type="radio" name="color" value="#0035e2">
+                      <span>Синяя</span>
+                    </label>
+                    <label class="df aic gap1">
+                      <input type="radio" name="color" value="#000">
+                      <span>Чёрная</span>
+                    </label>
+                    <label class="df aic gap1" for="other">
+                      <input type="radio" name="color">
+                      <span>Свой:</span>
+                      <input type="color" name="color" id="other">
+                    </label>
+                  </div>
+                  </div>
+                  <label class="text-bg-color">
+                  <i class="fa-solid fa-fill-drip"></i>
+                  <input type="color" id="text-bg-color">
+                  </label>
                 <i class="fa-solid fa-droplet-slash"></i>
-                <del>T</del>
-                <span>U</span>
-                <i>T</i>
-                <i class="fa-solid fa-circle-check"></i>
+                <del class="fs4 fw6 text-del passive">T</del>
+                <span class="fs4 fw6 text-underline passive">U</span>
+                <i class="fs4 fw6 format-clear passive">T</i>
+                <label class="df aic gap2 font-option active cp">
+                  <span class="fs2 fw3 o08">Разный размер букв</span>
+                  <i class="fa-solid fa-circle-check"></i>
+                  <i class="fa-regular fa-circle"></i>
+                  </label>
+                  <label class="df aic gap2 font-option active cp">
+                    <span class="fs2 fw3 o08">Разный отступ</span>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-regular fa-circle"></i>
+                  </label>
+                  <label class="df aic gap2 font-option active cp">
+                    <span class="fs2 fw3 o08">Разный наклон букв</span>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-regular fa-circle"></i>
+                  </label>
               </div>
               <div class="w100 df fww aic gap4 range-items"></div>
-              </div>
-              <div class="types w100 rd10 df aic jcsb fs2">
-                <p>Выберите фон для текста или загрузите свой</p>
-                <div class="df aic gap2 _type-contents">
-                  <label class="cp bg-type rd10">
-                    <img class="w100 h100" src="../imgs/image-1.png" alt="bg1" />
-                    <input type="radio" name="bg-type" />
-                  </label>
-                  <label class="cp bg-type rd10">
-                    <img class="w100 h100" src="../imgs/image.png" alt="bg1" />
-                    <input type="radio" name="bg-type" />
-                  </label>
-                  <label class="cp bg-type rd10">
-                    <img class="w100 h100" src="../imgs/image-3.png" alt="bg1" />
-                    <input type="radio" name="bg-type" />
-                  </label>
-                  <label class="cp df aic jc bg-type rd10 new-upload">
-                    <img src="../imgs/Icons.svg" alt="" />
-                    <input type="file" name="bg" id="upload-bg-img" />
-                  </label>
+            </div>
+            <div class="types w100 rd10 df aic jcsb fs2">
+              <p>Выберите фон для текста или загрузите свой</p>
+              <div class="df aic gap2 _type-contents">
+                <label class="cp df aic jc bg-type rd10 new-upload">
+                  <img src="../imgs/Icons.svg" alt="" />
+                  <input type="file" name="bg" id="upload-bg-img" />
+                </label>
                 </div>
-              </div>
-              </div>
-              </div>
-              <div class="f1 df fdc gap4 text-result">
+                </div>
+                </div>
+                </div>
+                <div class="f1 df fdc gap4 text-result">
           <div class="rd10 _result-body font-family1">
             <p class="fs10 text-body">
               Этот текст-заполнитель показывает, как будет выглядеть ваш текст,
@@ -99,8 +121,8 @@
             <button class="df aic jc gap2 black-button">
               Скачать <i class="fa-solid fa-lock"></i>
             </button>
-            </div>
-            </div>
+          </div>
+          </div>
     </div>
     <div class="w100 df fdc aic gap6 example-templates">
       <h5 class="fs7 py2">Примеры рукописного текста</h5>
@@ -337,7 +359,7 @@
         <div class="df fdc gap3">
           <a href="#">Условия использования</a>
           <a href="#">Политика конфиденциальности</a>
-          <a href="#">Отписаться от услуг</a>
+          <a href="./FAQ.html">Отписаться от услуг</a>
         </div>
       </div>
       <section class="df aic gap3">

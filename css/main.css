@@ -114,9 +114,14 @@
   background-position: center;
   overflow: hidden;
   > p {
+    font-size: inherit;
     padding: 25px;
     color: #0035e2;
-    line-height: 1.2;
+
+    span {
+      font-size: inherit;
+      font-family: inherit;
+    }
   }
 
   > button {
@@ -124,6 +129,22 @@
     right: 50%;
     transform: translateX(50%);
     bottom: 30px;
+  }
+}
+
+.font-option {
+  .fa-circle-check {
+    display: none;
+  }
+}
+
+.font-option.active {
+  .fa-circle-check {
+    display: flex;
+  }
+
+  .fa-circle {
+    display: none;
   }
 }
 
@@ -235,6 +256,10 @@ input::-moz-focus-outer {
   > input {
     display: none;
   }
+}
+
+.bg-type.active {
+  border: 1px solid #000;
 }
 
 .bg-type.new-upload {

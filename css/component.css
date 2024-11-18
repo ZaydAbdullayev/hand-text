@@ -198,7 +198,6 @@
   z-index: -1;
 }
 
-
 /* ============ subscribe modal ============ */
 .modal-wrapper {
   position: fixed;
@@ -206,11 +205,13 @@
   left: 0;
   width: 100%;
   height: 100dvh;
-  background: #00000070;
+  background: #00000080;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 .subscribe-content {
-  width: 75%;
+  width: 80%;
   position: relative;
   padding: 40px;
   background: #f5f5f7;
@@ -218,19 +219,21 @@
 
 .subscribe-form {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(8, 1fr);
   grid-gap: 15px;
 }
 
 .subscribe-info {
-  grid-area: 1 / 1 / 2 / 5;
+  grid-area: 1 / 1 / 1 / 6;
   background: #fff;
+  height: 127px;
   box-shadow: 0px 5px 20px 0px #00000008;
 }
 
 .subscribe-img {
-  grid-area: 2 / 1 / 5 / 5;
+  grid-area: 2 / 1 / 5 / 6;
   overflow: hidden;
+  height: 321px;
 
   > img {
     object-fit: cover;
@@ -238,8 +241,9 @@
 }
 
 .subscribe-payment {
-  grid-area: 1 / 5 / 5 / 8;
+  grid-area: 1 / 6 / 5 / 9;
   background: #fff;
+  height: 463px;
   padding: 40px 30px;
   box-shadow: 0px 5px 20px 0px #00000008;
 }
@@ -257,8 +261,25 @@
   }
 }
 
-._payment-option.small{
+._payment-option.small {
   height: 40px;
+  border: 1px solid #0006;
+
+  .fa-circle-check {
+    display: none;
+  }
+}
+
+._payment-option.small.active {
+  border: 1px solid #000;
+
+  .fa-circle-check {
+    display: flex;
+  }
+
+  .fa-circle {
+    display: none;
+  }
 }
 
 ._paymen_type {
@@ -311,3 +332,66 @@
 }
 
 /* ============== forgot password ============== */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+
+  > span {
+    padding: 0 3px;
+    font-size: var(--fs4);
+    color: #0035e2;
+    border-bottom: 3px solid #0035e2;
+  }
+}
+
+.tooltip-body {
+  position: absolute;
+  top: 130%;
+  left: -11px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  opacity: 0;
+  background: #333;
+  color: #fff;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 9999;
+
+  input {
+    background: #333;
+  }
+}
+
+.tooltip-body::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 10%;
+  border: 5px solid transparent;
+  border-bottom-color: #333;
+}
+
+.tooltip:hover .tooltip-body {
+  opacity: 1;
+  visibility: visible;
+}
+
+.text-bg-color {
+  > span {
+    padding: 0 3px;
+    font-size: var(--fs5);
+    color: #0035e2;
+    border-bottom: 3px solid #0035e2;
+  }
+  > input {
+    display: none;
+  }
+}
+
+.text-del.passive,
+.text-underline.passive,
+.format-clear.passive {
+  opacity: 0.6;
+}
