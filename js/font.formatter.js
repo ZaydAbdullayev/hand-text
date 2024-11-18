@@ -16,6 +16,8 @@ let font_option = {
     'dynamic-letter-size': true,
     'dynamic-letter-space': true,
     'dynamic-letter-italic': true,
+    'font-size': 24,  // Default font-size
+    'letter-spacing': 1  // Default letter-spacing
 };
 
 const text_input = document.querySelector('#text');
@@ -45,27 +47,47 @@ font_contents.addEventListener('change', (e) => {
 
 const modifiedText = (text) => {
     let modifiedText = '';
+    let dynamic_styles = '';
+
     for (let i = 0; i < text.length; i++) {
-        let dynamic_styles = '';
         const char = text[i];
+
+        // Eğer boşluk ise, non-breaking space ekleyin
+        if (char === ' ') {
+            modifiedText += `<span style="${dynamic_styles}">&nbsp;</span>`;
+            continue;
+        }
+
+        // Eğer satır sonu varsa, <br> etiketi ekleyin
+        if (char === '\n') {
+            modifiedText += `<br />`;
+            continue;
+        }
+
+        // Dinamik stil uygulamaları
         if (font_option['dynamic-letter-size']) {
-            const dynamic_letter_size = Math.floor(Math.random() * 5) + 30;
+            const dynamic_letter_size = font_option['font-size'] + Math.floor(Math.random() * 1); // Slider'dan gelen font-size
             dynamic_styles += `font-size: ${dynamic_letter_size}px; `;
         } else {
-            dynamic_styles += `font-size: 30px; `;
+            dynamic_styles += `font-size: ${font_option['font-size']}px; `;
         }
+
         if (font_option['dynamic-letter-space']) {
-            const dynamic_letter_space = Math.random() * 3;
+            const dynamic_letter_space = font_option['letter-spacing'] + (Math.random() * 6); // Slider'dan gelen letter-spacing
             dynamic_styles += `letter-spacing: ${dynamic_letter_space}px; `;
         }
+
         if (font_option['dynamic-letter-italic']) {
             const dynamic_italic = Math.random() > 0.8 ? 'italic' : 'normal';
             dynamic_styles += `font-style: ${dynamic_italic}; `;
         }
+
         modifiedText += `<span style="${dynamic_styles}">${char}</span>`;
     }
     return modifiedText;
 };
+
+
 
 // Kullanıcı metin kutusunu kaybettiğinde (blur eventi)
 text_input.addEventListener("blur", (e) => {
@@ -107,18 +129,21 @@ const updateStyles = () => {
         slider.addEventListener('input', (event) => {
             const { name, value } = event.target;
             const unit = event.target.getAttribute('data-unit');
-            text_body.style.setProperty(name, value + unit); 
-            let valueDisplay = slider.nextElementSibling;
+            font_option[name] = parseFloat(value);  // Global font_option'u güncelle
 
+            // Değerin doğru şekilde uygulanmasını sağla
+            text_body.style.setProperty(name, value + unit);
+
+            let valueDisplay = slider.nextElementSibling;
+            // Slider'la değiştirilen font-size ve letter-spacing için güncelleme
             if (font_option['dynamic-letter-size'] && name === 'font-size') {
-                const dynamic_letter_size = value + Math.floor(Math.random() * 1);
+                const dynamic_letter_size = font_option['font-size'] + Math.floor(Math.random() * 1);
                 for (let i = 0; i < text_body.children.length; i++) {
                     text_body.children[i].style.fontSize = dynamic_letter_size + unit;
                 }
             }
-
             if (font_option['dynamic-letter-space'] && name === 'letter-spacing') {
-                const dynamic_letter_space = value + (Math.random() * 6);
+                const dynamic_letter_space = font_option['letter-spacing'] + (Math.random() * 6);
                 for (let i = 0; i < text_body.children.length; i++) {
                     text_body.children[i].style.letterSpacing = dynamic_letter_space + unit;
                 }
@@ -127,10 +152,9 @@ const updateStyles = () => {
             if (font_option['dynamic-letter-italic']) {
                 const dynamic_italic = Math.random() > 0.8 ? 'italic' : 'normal';
                 for (let i = 0; i < text_body.children.length; i++) {
-                    text_body.children[i].style.letterSpacing = dynamic_italic
+                    text_body.children[i].style.fontStyle = dynamic_italic;
                 }
             }
-
             if (valueDisplay) {
                 valueDisplay.textContent = value;
             }
