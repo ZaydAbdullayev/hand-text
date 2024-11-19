@@ -2,6 +2,20 @@
   padding: 6% 0;
 }
 
+.auth-container.auth-modal-container{
+  position: relative;
+  max-width: 80%;
+  padding: 40px;
+  background: #f5f5f7;
+}
+
+.auth-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+}
+
 .auth-content {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -45,5 +59,14 @@
   > img {
     width: 100%;
     object-fit: cover;
+  }
+}
+
+.navbar-modal{
+  position: relative;
+  background: #fff;
+
+  a:not(#modal-signup){
+    color: #000;
   }
 }

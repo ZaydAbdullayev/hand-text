@@ -35,40 +35,52 @@ logo.addEventListener('click', () => {
     window.location.href = 'index.html';
 });
 
-let rangeSlider = function () {
-    let slider = $('.range-slider'),
-        range = $('.range-slider__range'),
-        value = $('.range-slider__value');
+document.addEventListener("DOMContentLoaded", () => {
+    const sliders = document.querySelectorAll('.range-slider');
+    sliders.forEach(slider => {
+        const range = slider.querySelector('.range-slider__range');
+        const value = slider.querySelector('.range-slider__value');
+        if (range && value) {
+            value.textContent = range.value;
+            range.addEventListener('input', () => {
+                value.textContent = range.value;
+            });
+        }
+    });
+});
 
-    slider.each(function () {
+const result_section = document.querySelector('#result_section');
+const history_section = document.querySelector('#history_section');
+const history_container = document.querySelector('.history-container');
 
-        value.each(function () {
-            var value = $(this).prev().attr('value');
-            $(this).html(value);
-        });
+if (result_section && history_section) {
+    result_section.addEventListener('click', () => {
+        history_section.classList.remove('active');
+        history_container.classList.remove('active');
+        result_section.classList.add('active');
+        r_slider.classList.add('active');
+    });
+    history_section.addEventListener('click', () => {
+        result_section.classList.remove('active');
+        r_slider.classList.remove('active');
+        history_section.classList.add('active');
+        history_container.classList.add('active');
+    });
+}
 
-        range.on('input', function () {
-            $(this).next(value).html(this.value);
+const histories = document.querySelectorAll('.history-item');
+if (histories) {
+    histories.forEach(history => {
+        history.addEventListener('click', () => {
+            history.classList.add('active');
+            histories.forEach(h => {
+                if (h !== history) {
+                    h.classList.remove('active');
+                }
+            });
         });
     });
-};
-
-rangeSlider();
-
-// document.addEventListener("DOMContentLoaded", () => {
-//     const sliders = document.querySelectorAll('.range-slider');
-//     sliders.forEach(slider => {
-//         const range = slider.querySelector('.range-slider__range');
-//         const value = slider.querySelector('.range-slider__value');
-//         if (range && value) {
-//             value.textContent = range.value;
-//             range.addEventListener('input', () => {
-//                 value.textContent = range.value;
-//             });
-//         }
-//     });
-// });
-
+}
 
 
 

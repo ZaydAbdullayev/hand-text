@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <div class="w100 df fdc aic gap6 wrapper">
+  <div class="w100 df fdc aic  wrapper">
     <nav class="w100 df aic jcsb px5 navbar">
       <div class="f1 df aic gap6 _left">
         <figure class="df aic jcc cp logo"></figure>
@@ -20,7 +20,7 @@
       </div>
       <div class="df aic gap2 _right">
         <a href="./auth.html?type=signin" class="bordered-button">Войти</a>
-        <a href="./auth-signup.html?type=signup" class="black-button">Зарегистрироваться</a>
+        <a href="#signup" class="black-button" id="auth-open">Зарегистрироваться</a>
       </div>
     </nav>
     <div class="w100 df fdc aic gap6 py2">
@@ -170,7 +170,9 @@
       </section>
     </footer>
   </div>
+  <div id="auth-modal-container" style="display: none;"></div>
 </body>
 <script src="../js/script.js"></script>
+<script src="../js/modal.js"></script>
 
 </html>

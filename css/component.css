@@ -7,6 +7,12 @@
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  > span {
+    background: #000;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 .black-button {
@@ -49,7 +55,7 @@
 
 .slider-container {
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
   padding: 0 40px;
 }
 
@@ -125,7 +131,8 @@
   display: none;
 }
 
-.fullscreen > img {
+.fullscreen > img,
+.fullscreen > ._result-body {
   display: none;
 }
 
@@ -140,6 +147,10 @@
   width: 37%;
   position: relative;
   overflow: hidden;
+}
+
+.text-result_body .slider-container-fullscreen {
+  width: 440px;
 }
 
 .fullscreen .slider-container-fullscreen {
@@ -205,9 +216,11 @@
   left: 0;
   width: 100%;
   height: 100dvh;
+  padding: 20px;
   background: #00000080;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
+  z-index: 999999;
 }
 
 .subscribe-content {
@@ -332,50 +345,64 @@
 }
 
 /* ============== forgot password ============== */
+
 .tooltip {
   position: relative;
-  display: inline-block;
-  cursor: pointer;
-
-  > span {
-    padding: 0 3px;
-    font-size: var(--fs4);
-    color: #0035e2;
-    border-bottom: 3px solid #0035e2;
-  }
+  width: 28px;
+  height: 28px;
 }
 
 .tooltip-body {
   position: absolute;
-  top: 130%;
-  left: -11px;
-  padding: 10px;
+  top: 0%;
+  left: 135%;
+  width: 170px;
+  padding: 15px;
   border-radius: 5px;
   font-size: 14px;
   opacity: 0;
-  background: #333;
-  color: #fff;
+  background: #fff;
+  color: #000;
   visibility: hidden;
   transition: all 0.3s ease;
   z-index: 9999;
+  box-shadow: 0px 2px 10px 0px #0000001a;
 
-  input {
-    background: #333;
+  input:not(.range-slider__range-small) {
+    display: none;
+  }
+
+  .close-tooltip {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+
+  .close-tooltip:hover {
+    opacity: 1;
   }
 }
 
-.tooltip-body::before {
-  content: "";
-  position: absolute;
-  top: -8px;
-  left: 10%;
-  border: 5px solid transparent;
-  border-bottom-color: #333;
-}
-
-.tooltip:hover .tooltip-body {
+.tooltip.active .tooltip-body {
   opacity: 1;
   visibility: visible;
+}
+
+.tooltip.active,
+.tooltip:active {
+  background: #d9d9d9;
+}
+
+.color-option {
+  width: 16px;
+  height: 16px;
+  border: 4px solid;
+  border-radius: 50%;
+}
+
+.color-option.active {
+  background: #fff !important;
 }
 
 .text-bg-color {
@@ -394,4 +421,56 @@
 .text-underline.passive,
 .format-clear.passive {
   opacity: 0.6;
+}
+
+@media (max-width: 430px) {
+  .slider-container {
+    padding: 0 0px;
+  }
+
+  .slide-btn {
+    display: none !important;
+  }
+
+  .slider{
+    gap: 20px;
+  }
+
+  .slider-item {
+    flex: 0 0 calc((100% / 1.7) - 15px);
+    margin: 0;
+  }
+
+  .slide-img-box {
+    height: 450px;
+  }
+
+  .subscribe-content {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .subscribe-form {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .subscribe-info {
+    grid-area: 1 / 1 / 1 / 5;
+  }
+
+  .subscribe-img {
+    grid-area: 2 / 1 / 5 / 5;
+  }
+
+  .subscribe-payment {
+    grid-area: 1 / 5 / 5 / 9;
+  }
+
+  .forget-password {
+    width: 100%;
+  }
+
+  .forget-password.change {
+    width: 100%;
+  }
 }

@@ -14,78 +14,59 @@
 </head>
 
 <body>
-  <div class="w100 df fdc aic gap6 wrapper">
+  <div class="w100 df fdc aic  wrapper">
     <nav class="w100 df aic jcsb px5 navbar">
       <div class="f1 df aic gap6 _left">
         <figure class="df aic jcc cp logo"></figure>
-        <a href="#">Перевод текста</a>
-        <a href="#">Для кого </a>
-        <a href="#">Примеры</a>
+        <a href="#hero">Перевод текста</a>
+        <a href="#examples">Для кого </a>
+        <a href="#forwho">Примеры</a>
       </div>
       <div class="df aic gap2 _right">
         <a href="./auth.html?type=signin" class="bordered-button">Войти</a>
-        <a href="./auth-signup.html?type=signup" class="black-button">Зарегистрироваться</a>
+        <a href="#signup" class="black-button" id="auth-open">Зарегистрироваться</a>
       </div>
+      <span class="df fdc aic cp navbar-mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
     </nav>
 
-    <div class="w100 df fww gap4 hero">
-      <h1 class="w100 df aic jc fs6 pd1">
-        Перевод печатного текста в
-        <span class="gradient-text">рукописный</span>
-        </h6>
-        <div class="w100 f2 df fdc gap4 text-generator">
-          <textarea class="w100 px4 py4 rd10" id="text" name="text"
-            placeholder="Введите текст, который хотите перевести в рукописную версию"></textarea>
-          <div class="w100 gap4 text-options">
-            <div class="rd10 fonts">
-              <div class="w100 h100 df fdc font_contents">
+    <div class="w100 df fww gap4 hero" id="hero">
+      <h6 class="w100 df aic jc fs6 pd1">
+        Перевод печатного
+        <span class="gradient-text"> <span> текста в </span> рукописный</span>
+      </h6>
+      <div class="w100 f2 df fdc gap4 text-generator">
+        <textarea class="w100 px4 py4 rd10" id="text" name="text"
+          placeholder="Введите текст, который хотите перевести в рукописную версию"></textarea>
+        <div class="w100 gap4 text-options">
+          <div class="rd10 fonts">
+            <div class="w100 h100 df fdc font_contents">
+            </div>
+          </div>
+          <div class="w100 df fdc rd10 px4 py4 gap5 parametrs">
+            <div class="w100 df aic gap3 _parametrs_header">
+              <div class="df aic gap1 _left-params">
+              </div>
+              <div class="df aic gap3 _right-params">
+                <label class="df fs2 aic gap2 font-option active cp" data-font-option="dynamic-letter-size">
+                  <span class="fw3 o08">Разный размер букв</span> <i class="fa-solid fa-circle-check"></i>
+                  <i class="fa-regular fa-circle"></i>
+                </label>
+                <label class="df fs2 aic gap2 font-option active cp" data-font-option="dynamic-letter-space">
+                  <span class="fw3 o08">Разный отступ</span>
+                  <i class="fa-solid fa-circle-check"></i>
+                  <i class="fa-regular fa-circle"></i>
+                </label> <label class="df fs2 aic gap2 font-option active cp" data-font-option="dynamic-letter-italic">
+                  <span class="fw3 o08">Разный наклон букв</span>
+                  <i class="fa-solid fa-circle-check"></i>
+                  <i class="fa-regular fa-circle"></i>
+                </label>
               </div>
             </div>
-            <div class="w100 df fdc rd10 px4 py4 gap5 parametrs">
-              <div class="w100 df aic gap3 _parametrs_header">
-                <div class="text-color tooltip">
-                  <span>A</span>
-                  <div class="df fdc gap1 shadow08 tooltip-body">
-                    <label class="df aic gap1">
-                      <input type="radio" name="color" value="#0035e2">
-                      <span>Синяя</span>
-                    </label>
-                    <label class="df aic gap1">
-                      <input type="radio" name="color" value="#000">
-                      <span>Чёрная</span>
-                    </label>
-                    <label class="df aic gap1" for="other">
-                      <input type="radio" name="color">
-                      <span>Свой:</span>
-                      <input type="color" name="color" id="other">
-                    </label>
-                  </div>
-                </div>
-                <label class="text-bg-color">
-                  <i class="fa-solid fa-fill-drip"></i>
-                  <input type="color" id="text-bg-color">
-                </label>
-                <i class="fa-solid fa-droplet-slash"></i>
-                <del class="fs4 fw6 text-del passive">T</del>
-                <span class="fs4 fw6 text-underline passive">U</span>
-                <i class="fs4 fw6 format-clear passive">T</i>
-                <label class="df aic gap2 font-option active cp" data-font-option="dynamic-letter-size">
-                  <span class="fs2 fw3 o08">Разный размер букв</span>
-                  <i class="fa-solid fa-circle-check"></i>
-                  <i class="fa-regular fa-circle"></i>
-                </label>
-                <label class="df aic gap2 font-option active cp" data-font-option="dynamic-letter-space">
-                  <span class="fs2 fw3 o08">Разный отступ</span>
-                  <i class="fa-solid fa-circle-check"></i>
-                  <i class="fa-regular fa-circle"></i>
-                </label>
-                <label class="df aic gap2 font-option active cp" data-font-option="dynamic-letter-italic">
-                  <span class="fs2 fw3 o08">Разный наклон букв</span>
-                  <i class="fa-solid fa-circle-check"></i>
-                  <i class="fa-regular fa-circle"></i>
-                </label>
-              </div>
-              <div class="w100 df fww aic gap4 range-items"></div>
+            <div class="w100 df fww aic gap4 range-items"></div>
             </div>
             <div class="types w100 rd10 df aic jcsb fs2">
               <p>Выберите фон для текста или загрузите свой</p>
@@ -96,35 +77,139 @@
                 </label>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="f1 df fdc gap4 text-result">
+            </div>
+            </div>
+            <div class="f1 df fdc gap4 text-result">
+        <div class="w100 h100 aic jc gap4 text-result_body active">
           <div class="rd10 _result-body font-family1">
             <p class="fs10 text-body">
-              Этот текст-заполнитель показывает, как будет выглядеть ваш текст,
-              преобразованный в рукописный формат. Введите любой текст в поле
-              слева, чтобы увидеть, как он появится здесь, на листке бумаги.
-              <br />
-              Вы можете выбрать различные стили листа и настроить внешний вид
-              вашего рукописного текста. <br />
-              Когда вы будете довольны результатом, просто скачайте документ...
             </p>
-            <button class="black-button df aic gap2">
+            <button class="black-button df aic gap2" id="open-fullscreen-mode">
               Все страницы <i class="fa-solid fa-arrow-pointer"></i>
             </button>
           </div>
-          <div class="df aic gap4 _result-footer">
-            <div class="f3 rd10 df aic gap2 px4 py3 fs1 _footer-options">
-              <p class="f2 df aic jc rd5 cp active">Результат</p>
-              <p class="f3 df aic jc rd5 cp">История генераций</p>
+          <i class="close"></i>
+          <div class="df aic jc slide-btn" id="fullscreen-slide-prev">
+            <span class="df aic jc fs2 cp" id="prev-slide-fullscreen">
+              <i class="fa-solid fa-angle-left"></i>
+            </span>
+          </div>
+          <div class="df aic gap6 slider-container-fullscreen">
+            <div class="f1 df slider-fullscreen" id="fullscreen-slider">
+            </div>
+          </div>
+          <div class="df aic jc slide-btn" id="fullscreen-slide-next">
+            <span class="df aic jc fs2 cp" id="next-slide-fullscreen">
+              <i class="fa-solid fa-angle-right"></i>
+            </span>
+          </div>
+          </div>
+          <div class="w100 h100 fdc aic shadow08 rd10 pd4 history-container">
+            <div class="w100 df aic gap3 pd4 rd5 history-item active">
+              <span class="fs2 o08">15.05.24</span>
+              <p class="fs2 fw3 o08 history-info">
+                Функции белков в организме. 1. Структурная функция. Белки входят в состав клеточных мембран, а
+                также обюразуют основу волос
+              </p>
+              <span class="fs2 o08">2 страницы</span>
+              <div class="df aic gap2 action">
+                <i class="fa-solid fa-pencil fs1"></i>
+                <i class="fa-regular fa-trash-can fs1"></i>
+              </div>
+            </div>
+            <div class="w100 df aic gap3 pd4 rd5 history-item">
+              <span class="fs2 o08">15.05.24</span>
+              <p class="fs2 fw3 o08 history-info">
+                Функции белков в организме. 1. Структурная функция. Белки входят в состав клеточных мембран, а
+                также обюразуют основу волос
+              </p>
+              <span class="fs2 o08">2 страницы</span>
+              <div class="df aic gap2 action">
+                <i class="fa-solid fa-pencil fs1"></i>
+                <i class="fa-regular fa-trash-can fs1"></i>
+              </div>
+            </div>
+            <div class="w100 df aic gap3 pd4 rd5 history-item">
+              <span class="fs2 o08">15.05.24</span>
+              <p class="fs2 fw3 o08 history-info">
+                Функции белков в организме. 1. Структурная функция. Белки входят в состав клеточных мембран, а
+                также обюразуют основу волос
+              </p>
+              <span class="fs2 o08">2 страницы</span>
+              <div class="df aic gap2 action">
+                <i class="fa-solid fa-pencil fs1"></i>
+                <i class="fa-regular fa-trash-can fs1"></i>
+              </div>
+            </div>
+            <div class="w100 df aic gap3 pd4 rd5 history-item">
+              <span class="fs2 o08">15.05.24</span>
+              <p class="fs2 fw3 o08 history-info">
+                Функции белков в организме. 1. Структурная функция. Белки входят в состав клеточных мембран, а
+                также обюразуют основу волос
+              </p>
+              <span class="fs2 o08">2 страницы</span>
+              <div class="df aic gap2 action">
+                <i class="fa-solid fa-pencil fs1"></i>
+                <i class="fa-regular fa-trash-can fs1"></i>
+              </div>
+            </div>
+            <div class="w100 df aic gap3 pd4 rd5 history-item">
+              <span class="fs2 o08">15.05.24</span>
+              <p class="fs2 fw3 o08 history-info">
+                Функции белков в организме. 1. Структурная функция. Белки входят в состав клеточных мембран, а
+                также обюразуют основу волос
+              </p>
+              <span class="fs2 o08">2 страницы</span>
+              <div class="df aic gap2 action">
+                <i class="fa-solid fa-pencil fs1"></i>
+                <i class="fa-regular fa-trash-can fs1"></i>
+              </div>
+            </div>
+            <div class="w100 df aic gap3 pd4 rd5 history-item">
+              <span class="fs2 o08">15.05.24</span>
+              <p class="fs2 fw3 o08 history-info">
+                Функции белков в организме. 1. Структурная функция. Белки входят в состав клеточных мембран, а
+                также обюразуют основу волос
+              </p>
+              <span class="fs2 o08">2 страницы</span>
+              <div class="df aic gap2 action">
+                <i class="fa-solid fa-pencil fs1"></i>
+                <i class="fa-regular fa-trash-can fs1"></i>
+              </div>
+            </div>
+            <div class="w100 df aic gap3 pd4 rd5 history-item">
+              <span class="fs2 o08">15.05.24</span>
+              <p class="fs2 fw3 o08 history-info">
+                Функции белков в организме. 1. Структурная функция. Белки входят в состав клеточных мембран, а
+                также обюразуют основу волос
+              </p>
+              <span class="fs2 o08">2 страницы</span>
+              <div class="df aic gap2 action">
+                <i class="fa-solid fa-pencil fs1"></i>
+                <i class="fa-regular fa-trash-can fs1"></i>
+              </div>
+            </div>
+            <div class="w100 df aic jcsb rd10 history-footer">
+              <p class="fs2 fw3 o08">15.05.24 - 20.10.24</p>
+              <span class="df aic gap2 fs2 o08">
+                <i class="fa-solid fa-angle-left cp fs05 06"></i>
+                <span>1 / 10</span>
+                <i class="fa-solid fa-angle-right cp fs05 06"></i>
+              </span>
+            </div>
+          </div>
+        <div class="df aic gap4 _result-footer">
+          <div class="f3 rd10 df aic gap2 px4 py3 fs1 _footer-options">
+            <p class="f2 df aic jc rd5 cp active" id="result_section">Результат</p>
+            <p class="f3 df aic jc rd5 cp" id="history_section">История генераций</p>
             </div>
             <button class="df aic jc gap2 black-button">
               Скачать <i class="fa-solid fa-lock"></i>
             </button>
-          </div>
-        </div>
+            </div>
+            </div>
     </div>
-    <div class="w100 df fdc aic gap6 example-templates">
+    <div class="w100 df fdc aic gap6 example-templates" id="examples">
       <h5 class="fs7 py2">Примеры рукописного текста</h5>
       <div class="w100 df aic gap6 slider-container">
         <div class="df aic jc slide-btn">
@@ -285,7 +370,7 @@
         </div>
       </div>
     </div>
-    <div class="w100 df fdc aic gap6 generation-info">
+    <div class="w100 df fdc aic gap6 generation-info" id="forwho">
       <h1 class="w100 df aic jc gap1 fs6 pd1">
         Для тех, кому <span class="gradient-text"> лень </span> писать вручную
       </h1>
@@ -356,6 +441,10 @@
           <a href="#">Для кого </a>
           <a href="#">Примеры</a>
         </div>
+        <section class="w100 df aic fdc gap3">
+          <a href="./auth.html?type=signin" class="black-button border-white fs1">Войти</a>
+          <a href="./auth-signup.html?type=signup" class="bordered-button border-white fs1">Зарегистрироваться</a>
+        </section>
         <div class="df fdc gap3">
           <a href="#">Условия использования</a>
           <a href="#">Политика конфиденциальности</a>
@@ -367,10 +456,14 @@
         <a href="./auth-signup.html?type=signup" class="bordered-button border-white fs1">Зарегистрироваться</a>
       </section>
     </footer>
+    <div id="auth-modal-container" style="display: none;"></div>
   </div>
+  <div id="navbar-mobile-modal" style="display: none;"></div>
 </body>
 <script src="../js/script.js"></script>
 <script src="../js/slider.js"></script>
+<script src="../js/modal.js"></script>
 <script src="../js/font.formatter.js"></script>
+<script src="../js/color.formatter.js"></script>
 
 </html>
