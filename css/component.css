@@ -487,10 +487,12 @@
   .more-imgs {
     top: 0;
     opacity: 0;
+    visibility: hidden;
   }
 
   .more-imgs.fullscreen {
     opacity: 1;
+    visibility: visible;
   }
 
   .slide-img-box:hover .more-imgs {
@@ -646,13 +648,13 @@
     position: absolute;
     text-align: center;
     top: 170%;
-    left: -60px;
+    left: -35px;
     width: calc(100vw - 80px);
     gap: 15px;
   }
 
   .tooltip:nth-child(2) .tooltip-body {
-    left: -100px;
+    left: -75px;
   }
 
   .range-slider-small > span {
