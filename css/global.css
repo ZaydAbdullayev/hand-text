@@ -87,7 +87,7 @@ a {
   text-decoration: none;
 }
 
-.input-height{
+.input-height {
   height: 34px !important;
   padding: 0 8%;
 }
@@ -566,6 +566,11 @@ a {
 
   .wrapper {
     padding: 20px;
+    overflow-y: auto;
+  }
+
+  .wrapper::-webkit-scrollbar {
+    display: none;
   }
 
   .navbar {
@@ -592,7 +597,7 @@ a {
     gap: 20px;
   }
 
-  .footer-left-section>:first-child {
+  .footer-left-section > :first-child {
     margin-bottom: 8px;
   }
 
