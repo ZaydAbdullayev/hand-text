@@ -385,7 +385,8 @@ input::-moz-focus-outer {
     display: flex !important;
   }
 
-  .text-generator-wrapper :where(.fonts, .close-mobile-wrapper, .parametrs, .types) {
+  .text-generator-wrapper
+    :where(.fonts, .close-mobile-wrapper, .parametrs, .types) {
     display: none !important;
   }
 
@@ -405,7 +406,8 @@ input::-moz-focus-outer {
     display: none;
   }
 
-  .text-generator-wrapper.mobile :where(.fonts, .close-mobile-wrapper, .parametrs, .types) {
+  .text-generator-wrapper.mobile
+    :where(.fonts, .close-mobile-wrapper, .parametrs, .types) {
     display: flex !important;
   }
 
@@ -429,7 +431,7 @@ input::-moz-focus-outer {
   }
 
   .text-generator > textarea {
-    max-height: 100px;
+    max-width: 100%;
     min-height: 100px;
   }
 
@@ -471,6 +473,10 @@ input::-moz-focus-outer {
 
   .text-result {
     max-width: 100%;
+  }
+
+  ._result-body {
+    width: 100vw !important;
   }
 
   ._result-footer {
