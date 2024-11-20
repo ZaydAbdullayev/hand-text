@@ -82,5 +82,9 @@ if (histories) {
     });
 }
 
+document.addEventListener('gesturestart', (event) => {
+    event.preventDefault();
+});
+
 
 
