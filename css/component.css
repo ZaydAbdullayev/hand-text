@@ -6,11 +6,13 @@
     #6fb1fc 80.22%
   );
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 
   > span {
     background: #000;
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 }
@@ -35,7 +37,7 @@
   justify-content: center;
   padding: 0px 20px;
   border-radius: 20px;
-  font-weight: bold;
+  font-weight: 600;
   background: #fff;
   color: #000;
   border: 1px solid #000;
@@ -44,6 +46,12 @@
 .black-button.border-white,
 .bordered-button.border-white {
   border-color: #fff;
+}
+
+.black-button.big,
+.bordered-button.big {
+  height: 38px;
+  padding: 0px 10px;
 }
 
 .black-button.small,
@@ -463,10 +471,11 @@
 
 .pagination-fullscreen {
   position: absolute;
-  bottom: 20%;
+  bottom: 15%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 999;
+  display: none;
 }
 
 .pagination > span.active,
@@ -580,5 +589,30 @@
     button {
       width: 80%;
     }
+  }
+
+  .tooltip.active {
+    margin-bottom: 110px;
+  }
+
+  .tooltip:nth-child(2).active {
+    margin-bottom: 160px;
+  }
+
+  .tooltip-body {
+    position: absolute;
+    text-align: center;
+    top: 170%;
+    left: -60px;
+    width: calc(100vw - 80px);
+    gap: 15px;
+  }
+
+  .tooltip:nth-child(2) .tooltip-body {
+    left: -100px;
+  }
+
+  .range-slider-small > span {
+    font-size: 12px !important;
   }
 }

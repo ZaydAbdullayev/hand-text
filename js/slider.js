@@ -48,7 +48,6 @@ updatePagination();
 document.querySelectorAll('.slide-img-box').forEach((box) => {
     const more_imgs = box.querySelector('.more-imgs');
     const open = box.querySelector(".open-main-screen")
-    console.log(more_imgs);
 
     const container = more_imgs.querySelector('#fullscreen-slider');
     const nextBtn = more_imgs.querySelector('#next-slide-fullscreen');
@@ -195,3 +194,16 @@ container.addEventListener("scroll", () => {
 });
 
 
+const text_wrapper = document.querySelector('.text-generator-wrapper');
+const close_mobile_wrapper = document.querySelector('.close-mobile-wrapper');
+const open_text_generator = document.querySelector('.open-text-generator');
+
+if (text_wrapper) {
+    open_text_generator.addEventListener('click', () => {
+        text_wrapper.classList.add('mobile');
+    });
+
+    close_mobile_wrapper.addEventListener('click', () => {
+        text_wrapper.classList.remove('mobile');
+    });
+}
