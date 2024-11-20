@@ -16,21 +16,29 @@
 }
 
 .black-button {
-  padding: 8px 20px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 20px;
   border-radius: 20px;
   font-weight: bold;
   background: #000;
   color: #fff;
-  border: 2px solid #000;
+  border: 1px solid #000;
 }
 
 .bordered-button {
-  padding: 8px 20px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 20px;
   border-radius: 20px;
   font-weight: bold;
   background: #fff;
   color: #000;
-  border: 2px solid #000;
+  border: 1px solid #000;
 }
 
 .black-button.border-white,
@@ -40,16 +48,18 @@
 
 .black-button.small,
 .bordered-button.small {
-  padding: 5px 10px;
+  height: 28px;
+  padding: 0px 10px;
 }
 
 .black-button.small-x,
 .bordered-button.small-x {
-  padding: 8px 4%;
+  height: 24px;
+  padding: 0px 4%;
 }
 
 .bordered-button.danger {
-  border: 2px solid #ff0000;
+  border: 1px solid #ff0000;
   color: #ff0000;
 }
 
@@ -537,19 +547,18 @@
   }
 
   .subscribe-form {
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .subscribe-info {
-    grid-area: 1 / 1 / 1 / 5;
   }
 
   .subscribe-img {
-    grid-area: 2 / 1 / 5 / 5;
   }
 
   .subscribe-payment {
-    grid-area: 1 / 5 / 5 / 9;
   }
 
   .forget-password {
@@ -558,5 +567,18 @@
 
   .forget-password.change {
     width: 100%;
+  }
+
+  .form {
+    flex-direction: column;
+
+    input {
+      width: 80%;
+      flex: none;
+    }
+
+    button {
+      width: 80%;
+    }
   }
 }

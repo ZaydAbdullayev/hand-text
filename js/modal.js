@@ -145,3 +145,32 @@ if (navbar_open) {
         navbarDiv.style.display = 'block';
     });
 }
+
+const forgot_password_open = document.querySelector('.forgot-password-open');
+const forgot_passwordDiv = document.querySelector('#forgot-password');
+document.addEventListener("DOMContentLoaded", async () => {
+    if (!forgot_passwordDiv) {
+        console.log("#forgot-password element not found!");
+        return;
+    }
+    try {
+        const response = await fetch("../modal/forget.password.html");
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        forgot_passwordDiv.innerHTML = await response.text();
+        const forgot_password_close = forgot_passwordDiv.querySelector('.forgot-password-close');
+        if (forgot_password_close) {
+            forgot_password_close.addEventListener('click', () => {
+                forgot_passwordDiv.style.display = 'none';
+            });
+        } else {
+            console.log(".forgot-password-close element not found after loading HTML!");
+        }
+    } catch (error) {
+        console.log("Error loading HTML:", error);
+    }
+});
+if (forgot_password_open) {
+    forgot_password_open.addEventListener('click', () => {
+        forgot_passwordDiv.style.display = 'block';
+    });
+}

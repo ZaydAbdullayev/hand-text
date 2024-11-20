@@ -1,155 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/component.css">
-    <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="../css/profile.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/component.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/profile.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
-    <div class="w100 df fdc aic  wrapper">
-        <nav class="w100 df aic jcsb px5 navbar">
-            <div class="f1 df aic gap6 _left">
-                <figure class="df aic jcc cp logo"></figure>
-                <a href="#">Перевод текста</a>
-                <a href="#">Для кого </a>
-                <a href="#">Примеры</a>
-            </div>
-            <div class="df aic gap2 _right">
-                <a href="./auth.html?type=signin" class="bordered-button">Войти</a>
-                <a href="#signup" class="black-button" id="auth-open">Зарегистрироваться</a>
-            </div>
-        </nav>
-        <div class="w100 df fdc aic gap6" style="padding: 6% 0 4%;">
-            <h5 class="w100 df aic jc fs11 py3">Ваш профиль</h5>
-            <div class="w100 df fdc gap3">
-                <div class="w100 df gap3 full-info">
-                    <div class="f2 df fdc gap3 px6 py4 shadow08 rd10">
-                        <p class="fs5 fw6 o08">Общая информация</p>
-                        <p class="df aic gap2 fs2 fw3 o08">Почта: <span class="fw4">mail@example.com</span></p>
-                        <p class="df aic gap2 fs2 fw3 o08">Пароль: <span class="fw4">**********************</span></p>
-                        <div class="w100 df aic jc gap3">
-                            <button class="f2 black-button fs1 fw4 change-password-open">Сменить пароль</button>
-                            <button class="f1 bordered-button fs1 fw4 signin">Выйти</button>
-                            <button class="f2 bordered-button danger fs1 fw4 delete-account-open">Удалить
-                                аккаунт</button>
-                        </div>
-                    </div>
-                    <div class="f3 df fdc gap4 px6 py4 shadow08 rd10">
-                        <p class="fs5 fw6 o08">Управлять подпиской</p>
-                        <div class="w100 df aic gap3 subscribe-options">
-                            <div class="w100 df aic jcsb rd10 px3 cp _payment-option small active">
-                                <div class="df aic gap3">
-                                    <i class="fa-solid fa-circle-check"></i>
-                                    <i class="fa-regular fa-circle"></i>
-                                    <p class="fs2 fw6">3 дня</p>
-                                    <span class="fs05 o04">Пробный период</span>
-                                </div>
-                                <p class="fs3 fw6">
-                                    <span class="fs2 fw3">руб</span>
-                                </p>
-                            </div>
-                            <div class="w100 df aic jcsb rd10 px3 cp _payment-option small">
-                                <div class="df aic gap3">
-                                    <i class="fa-regular fa-circle"></i>
-                                    <i class="fa-solid fa-circle-check"></i>
-                                    <p class="fs2 fw6">7 дня</p>
-                                </div>
-                                <p class="fs3 fw6">
-                                    890 <span class="fs2 fw3">руб</span>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="w100 df aic gap3">
-                            <button class="black-button fs1 fw4 subscribe-open">Улучшить план</button>
-                            <p class="fs05 fw3 o08">Отписка в любой момент</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="w100 df fdc gap4 px6 py4 shadow08 rd10">
-                    <p class="fs5 fw6 o08">Частые вопросы</p>
-                    <div class="w100 df fdc">
-                        <details>
-                            <summary class="fs2 cp">Что делает ваш сервис?</summary>
-                            <span class="fs1 fw3">
-                                Наш сервис преобразует печатный текст в рукописный, имитируя
-                                естественный почерк. Вы получаете текст, написанный будто
-                                вручную, но без необходимости писать его самому.
-                            </span>
-                        </details>
-                        <details>
-                            <summary class="fs2 cp">Сколько времени занимает преобразование текста?</summary>
-                            <span class="fs1 fw3">
-                                Время обработки не зависит от объёма текста и занимает всего несколько минут.
-                            </span>
-                        </details>
-                        <details>
-                            <summary class="fs2 cp">Можно ли выбрать стиль почерка?</summary>
-                            <span class="fs1 fw3">
-                                Да, мы предлагаем несколько стилей рукописного текста, чтобы вы могли выбрать наиболее
-                                подходящий для ваших
-                                нужд.
-                            </span>
-                        </details>
-                        <details>
-                            <summary class="fs2 cp">На каких типах бумаги будет размещён текст?</summary>
-                            <span class="fs1 fw3">
-                                Вы можете выбрать стили оформления бумаги для вашего текста, например, лист в клетку, в
-                                линейку или чистый
-                                лист.
-                            </span>
-                        </details>
-                        <details>
-                            <summary class="fs2 cp">Подходит ли ваш сервис для создания учебных материалов?</summary>
-                            <span class="fs1 fw3">
-                                Да, наш сервис отлично подходит для создания конспектов, записей лекций и других учебных
-                                материалов,
-                                имитируя реальный
-                                рукописный стиль.
-                            </span>
-                        </details>
-                    </div>
-                </div>
-            </div>
+  <body>
+    <div class="w100 df fdc aic wrapper">
+      <nav class="w100 df aic jcsb px5 navbar">
+        <div class="f1 df aic gap6 _left">
+          <figure class="df aic jcc cp logo"></figure>
+          <a href="#">Перевод текста</a>
+          <a href="#">Для кого </a>
+          <a href="#">Примеры</a>
         </div>
-        <footer class="w100 df jcsb rd10 footer">
-            <div class="df footer-left-section fs1">
-                <div class="df fdc gap2">
-                    <span class="logo-footer"></span>
-                    <span class="fs05" style="opacity: 0.5">© Hand Text 2024</span>
-                </div>
-                <div class="df fdc gap3">
-                    <a href="#">Перевод текста</a>
-                    <a href="#">Для кого </a>
-                    <a href="#">Примеры</a>
-                </div>
-                <div class="df fdc gap3">
-                    <a href="#">Условия использования</a>
-                    <a href="#">Политика конфиденциальности</a>
-                    <a href="./FAQ.html">Отписаться от услуг</a>
-                </div>
+        <div class="df aic gap2 _right">
+          <a href="./auth.html?type=signin" class="bordered-button">Войти</a>
+          <a href="#signup" class="black-button" id="auth-open"
+            >Зарегистрироваться</a
+          >
+        </div>
+        <span class="df fdc aic cp navbar-mobile-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </nav>
+      <div class="w100 df fdc aic gap6 profile-container">
+        <h5 class="w100 df aic jc fs11 py3">Ваш профиль</h5>
+        <div class="w100 df fdc gap3">
+          <div class="w100 df gap3 full-info">
+            <div class="f2 df fdc gap3 px6 py4 shadow08 rd10">
+              <p class="fs5 fw6 o08">Общая информация</p>
+              <p class="df aic gap2 fs2 fw3 o08">
+                Почта: <span class="fw4">mail@example.com</span>
+              </p>
+              <p class="df aic gap2 fs2 fw3 o08">
+                Пароль: <span class="fw4">**********************</span>
+              </p>
+              <div class="w100 df aic jc gap3 profile-actions">
+                <button class="f2 black-button fs1 fw4 change-password-open">
+                  Сменить пароль
+                </button>
+                <button class="f1 bordered-button fs1 fw4 signin">Выйти</button>
+                <button
+                  class="f2 bordered-button danger fs1 fw4 delete-account-open"
+                >
+                  Удалить аккаунт
+                </button>
+              </div>
             </div>
-            <section class="df aic gap3">
-                <a href="./auth.html?type=signin" class="black-button border-white fs1">Войти</a>
-                <a href="./auth-signup.html?type=signup" class="bordered-button border-white fs1">Зарегистрироваться</a>
-            </section>
-        </footer>
-        <div id="stop-subscribe" style="display: none;"></div>
-        <div id="get-subscribe" style="display: none;"></div>
-        <div id="delete-account" style="display: none;"></div>
-        <div id="change-password" style="display: none;"></div>
+            <div class="f3 df fdc gap4 px6 py4 shadow08 rd10">
+              <p class="fs5 fw6 o08">Управлять подпиской</p>
+              <div class="w100 df aic gap3 subscribe-options">
+                <div
+                  class="w100 df aic jcsb rd10 px3 cp _payment-option small active"
+                >
+                  <div class="df aic gap3">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-regular fa-circle"></i>
+                    <p class="fs2 fw6">3 дня</p>
+                    <span class="fs05 o04">Пробный период</span>
+                  </div>
+                  <p class="fs3 fw6">
+                    <span class="fs2 fw3">руб</span>
+                  </p>
+                </div>
+                <div class="w100 df aic jcsb rd10 px3 cp _payment-option small">
+                  <div class="df aic gap3">
+                    <i class="fa-regular fa-circle"></i>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <p class="fs2 fw6">7 дня</p>
+                  </div>
+                  <p class="fs3 fw6">890 <span class="fs2 fw3">руб</span></p>
+                </div>
+              </div>
+              <div class="w100 df aic gap3 delete-subs">
+                <button class="black-button fs1 fw4 subscribe-open">
+                  Улучшить план
+                </button>
+                <a href="./unsubscribe.html" class="fw3 o08" style="color: #333;">Отписка в любой момент</a>
+              </div>
+            </div>
+          </div>
+          <div class="w100 df fdc gap4 px6 py4 shadow08 rd10 faq">
+            <p class="fs5 fw6 o08">Частые вопросы</p>
+            <div class="w100 df fdc">
+              <details>
+                <summary class="fs2 cp">Что делает ваш сервис?</summary>
+                <span class="fs1 fw3">
+                  Наш сервис преобразует печатный текст в рукописный, имитируя
+                  естественный почерк. Вы получаете текст, написанный будто
+                  вручную, но без необходимости писать его самому.
+                </span>
+              </details>
+              <details>
+                <summary class="fs2 cp">
+                  Сколько времени занимает преобразование текста?
+                </summary>
+                <span class="fs1 fw3">
+                  Время обработки не зависит от объёма текста и занимает всего
+                  несколько минут.
+                </span>
+              </details>
+              <details>
+                <summary class="fs2 cp">
+                  Можно ли выбрать стиль почерка?
+                </summary>
+                <span class="fs1 fw3">
+                  Да, мы предлагаем несколько стилей рукописного текста, чтобы
+                  вы могли выбрать наиболее подходящий для ваших нужд.
+                </span>
+              </details>
+              <details>
+                <summary class="fs2 cp">
+                  На каких типах бумаги будет размещён текст?
+                </summary>
+                <span class="fs1 fw3">
+                  Вы можете выбрать стили оформления бумаги для вашего текста,
+                  например, лист в клетку, в линейку или чистый лист.
+                </span>
+              </details>
+              <details>
+                <summary class="fs2 cp">
+                  Подходит ли ваш сервис для создания учебных материалов?
+                </summary>
+                <span class="fs1 fw3">
+                  Да, наш сервис отлично подходит для создания конспектов,
+                  записей лекций и других учебных материалов, имитируя реальный
+                  рукописный стиль.
+                </span>
+              </details>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="w100 df jcsb rd10 footer">
+        <div class="df footer-left-section fs1">
+          <div class="df fdc gap2">
+            <span class="logo-footer"></span>
+            <span class="fs05" style="opacity: 0.5">© Hand Text 2024</span>
+          </div>
+          <div class="df fdc gap3">
+            <a href="#">Перевод текста</a>
+            <a href="#">Для кого </a>
+            <a href="#">Примеры</a>
+          </div>
+          <section class="w100 df aic fdc gap3">
+            <a
+              href="./auth.html?type=signin"
+              class="black-button border-white fs1"
+              >Войти</a
+            >
+            <a
+              href="./auth-signup.html?type=signup"
+              class="bordered-button border-white fs1"
+              >Зарегистрироваться</a
+            >
+          </section>
+          <div class="df fdc gap3">
+            <a href="./profile.html">Профиль</a>
+            <a href="#">Политика конфиденциальности</a>
+            <a href="./FAQ.html">Отписаться от услуг</a>
+          </div>
+        </div>
+        <section class="df aic gap3">
+          <a
+            href="./auth.html?type=signin"
+            class="black-button border-white fs1"
+            >Войти</a
+          >
+          <a
+            href="./auth-signup.html?type=signup"
+            class="bordered-button border-white fs1"
+            >Зарегистрироваться</a
+          >
+        </section>
+      </footer>
+      <div id="stop-subscribe" style="display: none"></div>
+      <div id="get-subscribe" style="display: none"></div>
+      <div id="delete-account" style="display: none"></div>
+      <div id="change-password" style="display: none"></div>
     </div>
-    <div id="auth-modal-container" style="display: none;"></div>
-</body>
-<script src="../js/script.js"></script>
-<script src="../js/modal.js"></script>
-<script src="../js/profile.js"></script>
-
+    <div id="auth-modal-container" style="display: none"></div>
+    <div id="navbar-mobile-modal" style="display: none;"></div>
+  </body>
+  <script src="../js/script.js"></script>
+  <script src="../js/modal.js"></script>
+  <script src="../js/profile.js"></script>
 </html>

@@ -1,74 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/component.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/unsubscribe.css" />
+    <title>Document</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../css/component.css" />
-  <link rel="stylesheet" href="../css/global.css" />
-  <link rel="stylesheet" href="../css/unsubscribe.css" />
-  <title>Document</title>
-</head>
-
-<body>
-  <div class="w100 df fdc aic  wrapper">
-    <nav class="w100 df aic jcsb px5 navbar">
-      <div class="f1 df aic gap6 _left">
-        <figure class="df aic jcc cp logo"></figure>
-        <a href="#">Перевод текста</a>
-        <a href="#">Для кого </a>
-        <a href="#">Примеры</a>
-      </div>
-      <div class="df aic gap2 _right">
-        <a href="./auth.html?type=signin" class="bordered-button">Войти</a>
-        <a href="./auth-signup.html?type=signup" class="black-button">Зарегистрироваться</a>
-      </div>
-    </nav>
-    <div class="w100 df fdc aic gap6 unsubscribe-container">
-      <h5 class="w100 df aic jc fs11 py3 auth-title">
-        Остановить подписку Hand Text
-      </h5>
-      <form class="w100 df fdc rd10 gap4 unsubscribe-form">
-        <div class="w100 df aic gap3">
-          <label class="f1 df aic gap3">
-            <p class="fs2">Введите ваш E-Mail</p>
-            <input type="email" placeholder="example@mail.ru" class="f1 px3 py2 fs05 fw3 rd20" />
-          </label>
-          <button class="black-button py2 fs1">Отписаться</button>
-        </div>
-        <p class="fs1 o08 fw3">
-          Нажимая на кнопку, вы отказываетесь от
-          <span class="fw4">
-            условий использования, политики конфиденциальности и больше
-            не</span>
-          сможете пользоваться услугами сервиса
-        </p>
-      </form>
-    </div>
-    <footer class="w100 df jcsb rd10 footer">
-      <div class="df footer-left-section fs1">
-        <div class="df fdc gap2">
-          <span class="logo-footer"></span>
-          <span class="fs05" style="opacity: 0.5">© Hand Text 2024</span>
-        </div>
-        <div class="df fdc gap3">
+  <body>
+    <div class="w100 df fdc aic wrapper">
+      <nav class="w100 df aic jcsb px5 navbar">
+        <div class="f1 df aic gap6 _left">
+          <figure class="df aic jcc cp logo"></figure>
           <a href="#">Перевод текста</a>
           <a href="#">Для кого </a>
           <a href="#">Примеры</a>
         </div>
-        <div class="df fdc gap3">
-          <a href="#">Условия использования</a>
-          <a href="#">Политика конфиденциальности</a>
-          <a href="./FAQ.html">Отписаться от услуг</a>
+        <div class="df aic gap2 _right">
+          <a href="./auth.html?type=signin" class="bordered-button">Войти</a>
+          <a href="./auth-signup.html?type=signup" class="black-button"
+            >Зарегистрироваться</a
+          >
         </div>
+        <span class="df fdc aic cp navbar-mobile-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </nav>
+      <div class="w100 df fdc aic gap6 unsubscribe-container">
+        <h5 class="w100 df aic jc fs11 py3 auth-title">
+          Остановить подписку Hand Text
+        </h5>
+        <form class="w100 df fdc rd10 gap4 unsubscribe-form">
+          <div class="w100 df aic gap3">
+            <label class="f1 df aic gap3">
+              <p class="fs2">Введите ваш E-Mail</p>
+              <input
+                type="email"
+                placeholder="example@mail.ru"
+                class="f1 px3 py2 fs05 fw3 rd20"
+              />
+            </label>
+            <button class="black-button py2 fs1">Отписаться</button>
+          </div>
+          <p class="fs1 o08 fw3">
+            Нажимая на кнопку, вы отказываетесь от
+            <span class="fw4">
+              условий использования, политики конфиденциальности и больше
+              не</span
+            >
+            сможете пользоваться услугами сервиса
+          </p>
+        </form>
       </div>
-      <section class="df aic gap3">
-        <a href="./auth.html?type=signin" class="black-button border-white fs1">Войти</a>
-        <a href="./auth-signup.html?type=signup" class="bordered-button border-white fs1">Зарегистрироваться</a>
-      </section>
-    </footer>
-  </div>
-</body>
-<script src="../js/script.js"></script>
-
+      <footer class="w100 df jcsb rd10 footer">
+        <div class="df footer-left-section fs1">
+          <div class="df fdc gap2">
+            <span class="logo-footer"></span>
+            <span class="fs05" style="opacity: 0.5">© Hand Text 2024</span>
+          </div>
+          <div class="df fdc gap3">
+            <a href="#">Перевод текста</a>
+            <a href="#">Для кого </a>
+            <a href="#">Примеры</a>
+          </div>
+          <section class="w100 df aic fdc gap3">
+            <a
+              href="./auth.html?type=signin"
+              class="black-button border-white fs1"
+              >Войти</a
+            >
+            <a
+              href="./auth-signup.html?type=signup"
+              class="bordered-button border-white fs1"
+              >Зарегистрироваться</a
+            >
+          </section>
+          <div class="df fdc gap3">
+            <a href="./profile.html">Профиль</a>
+            <a href="#">Политика конфиденциальности</a>
+            <a href="./FAQ.html">Отписаться от услуг</a>
+          </div>
+        </div>
+        <section class="df aic gap3">
+          <a
+            href="./auth.html?type=signin"
+            class="black-button border-white fs1"
+            >Войти</a
+          >
+          <a
+            href="./auth-signup.html?type=signup"
+            class="bordered-button border-white fs1"
+            >Зарегистрироваться</a
+          >
+        </section>
+      </footer>
+    </div>
+    <div id="navbar-mobile-modal" style="display: none"></div>
+  </body>
+  <script src="../js/script.js"></script>
+  <script src="../js/modal.js"></script>
 </html>

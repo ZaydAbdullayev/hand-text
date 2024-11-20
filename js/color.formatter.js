@@ -64,12 +64,6 @@ const formats = [
         name: "format-clear",
     }
 ];
-// formatter: (color) => `color: ${color};`,
-//     formatter: (color) => `background-color: ${color};`,
-//         formatter: () => `color: initial; background-color: initial;`,
-//             formatter: () => `text-decoration: line-through;`,
-//                 formatter: () => `text-decoration: underline;`,
-//                     formatter: () => "",
 
 const adjustColorBrightness = (hexColor, brightness) => {
     const bigint = parseInt(hexColor.slice(1), 16);
@@ -247,6 +241,17 @@ function renderTooltipBody(name) {
 }
 
 text_body.addEventListener("mouseup", () => {
+    const selection = window.getSelection();
+    if (selection.toString().length > 0) {
+        const range = selection.getRangeAt(0);
+        const startElement = range.startContainer.parentElement;
+        const endElement = range.endContainer.parentElement;
+        startIndex = Array.from(startElement.parentElement.children).indexOf(startElement);
+        endIndex = Array.from(endElement.parentElement.children).indexOf(endElement);
+    }
+});
+
+text_body.addEventListener("touchend", () => {
     const selection = window.getSelection();
     if (selection.toString().length > 0) {
         const range = selection.getRangeAt(0);

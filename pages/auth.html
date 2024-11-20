@@ -1,92 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/component.css">
-    <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="../css/register.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/component.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/register.css" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
-    <div class="w100 df fdc aic  wrapper">
-        <nav class="w100 df aic jcsb px5 navbar">
-            <div class="f1 df aic gap6 _left">
-                <figure class="df aic jcc cp logo"></figure>
-                <a href="#">Перевод текста</a>
-                <a href="#">Для кого </a>
-                <a href="#">Примеры</a>
-            </div>
-            <div class="df aic gap2 _right">
-                <a href="./auth.html?type=signin" class="bordered-button">Войти</a>
-                <a href="./auth-signup.html?type=signup" class="black-button">Зарегистрироваться</a>
-            </div>
-        </nav>
-
-        <div class="w100 df fdc aic gap6 auth-container">
-            <h5 class="w100 df aic jc fs11 py3 auth-title"></h5>
-            <div class="auth-content">
-                <div class="px4 py3 df fdc gap5 auth-form rd10">
-                    <h5 class="fs5">Вход в аккаунт</h5>
-                    <div class="df aic gap2">
-                        <span class="fs1" style="font-weight: 300;">Используй свои учетные данные или воспользуся</span>
-                        <img src="../imgs/Icon.svg" alt="Icon">
-                        <img src="../imgs/Icon-1.svg" alt="Icon">
-                        <img src="../imgs/Icon-2.svg" alt="Icon">
-                    </div>
-                    <form class="w100 df aic fww gap3 _form">
-                        <input class="px3 py2 fs05 rd20" type="email" placeholder="E-Mail">
-                        <input class="px3 py2 fs05 rd20" type="email" placeholder="Пароль">
-                        <div class="w100 df aic gap2">
-                            <button class="black-button fs1">Авторизоваться</button>
-                            <p class="fs1" style="font-weight: 300;">Еще нет аккаунта?
-                                <b><a href="./auth-signup.html?type=signup" style="color: #333;">Зарегистрироваться</a></b>
-                            </p>
-                            <a href="#" class="fs1" style="color: #333;">Забыли пароль?</a>
-                        </div>
-                    </form>
-                    <p class="fs1" style="font-weight: 300;">Нажимая на кнопку, вы соглашаетесь с
-                        <b>условиями использования и политикой конфиденциальности</b>
-                    </p>
-                </div>
-                <div class="px4 py4 auth-info rd10">
-                    <p class="fs2">Присоединяйся к тысячам довольных пользователей</p>
-                    <span class="fs1">Получай рукописные тексты в пару кликов. <br>
-                        Уникальный почерк для любых нужд — от учебы до персональных сообщений</span>
-                </div>
-                <figure class="auth-img rd10">
-                    <img src="../imgs/register.png" alt="">
-                </figure>
-            </div>
+  <body>
+    <div class="w100 df fdc aic wrapper">
+      <nav class="w100 df aic jcsb px5 navbar">
+        <div class="f1 df aic gap6 _left">
+          <figure class="df aic jcc cp logo"></figure>
+          <a href="#">Перевод текста</a>
+          <a href="#">Для кого </a>
+          <a href="#">Примеры</a>
         </div>
+        <div class="df aic gap2 _right">
+          <a href="./auth.html?type=signin" class="bordered-button">Войти</a>
+          <a href="./auth-signup.html?type=signup" class="black-button"
+            >Зарегистрироваться</a
+          >
+        </div>
+        <span class="df fdc aic cp navbar-mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+      </nav>
 
-        <footer class="w100 df jcsb rd10 footer">
-            <div class="df footer-left-section fs1">
-                <div class="df fdc gap2">
-                    <span class="logo-footer"></span>
-                    <span class="fs05" style="opacity: 0.5">© Hand Text 2024</span>
-                </div>
-                <div class="df fdc gap3">
-                    <a href="#">Перевод текста</a>
-                    <a href="#">Для кого </a>
-                    <a href="#">Примеры</a>
-                </div>
-                <div class="df fdc gap3">
-                    <a href="#">Условия использования</a>
-                    <a href="#">Политика конфиденциальности</a>
-                    <a href="./FAQ.html">Отписаться от услуг</a>
-                </div>
+      <div class="w100 df fdc aic gap6 auth-container">
+        <h5 class="w100 df aic jc fs11 py3 auth-title">
+          Войдите в сервис Hand Text
+        </h5>
+        <div class="auth-content">
+          <div class="px4 py3 df fdc gap5 auth-form rd10">
+            <h5 class="fs5">Вход в аккаунт</h5>
+            <div class="df aic gap2">
+              <span class="fs1" style="font-weight: 300"
+                >Используй свои учетные данные или воспользуся</span
+              >
+              <img src="../imgs/Icon.svg" alt="Icon" />
+              <img src="../imgs/Icon-1.svg" alt="Icon" />
+              <img src="../imgs/Icon-2.svg" alt="Icon" />
             </div>
-            <section class="df aic gap3">
-                <a href="./auth.html?type=signin" class="black-button border-white fs1">Войти</a>
-                <a href="./auth-signup.html?type=signup" class="bordered-button border-white fs1">Зарегистрироваться</a>
-            </section>
-        </footer>
-    </div>
-</body>
-<script src="../js/auth.js"></script>
-<script src="../js/script.js"></script>
+            <form class="w100 df aic fww gap3 _form">
+              <input
+                class="fs05 rd20"
+                type="email"
+                placeholder="E-Mail"
+              />
+              <input
+                class="fs05 rd20"
+                type="email"
+                placeholder="Пароль"
+              />
+              <div class="w100 df aic gap2">
+                <button class="black-button fs1">Авторизоваться</button>
+                <p class="fs1" style="font-weight: 300">
+                  Еще нет аккаунта? 
+                  <b
+                    ><a
+                      href="./auth-signup.html?type=signup"
+                      style="color: #333"
+                      > Зарегистрироваться </a
+                    ></b
+                  >
+                  <a href="#" class="fs1 forgot-password-open" style="color: #333"> Забыли пароль?</a>
+                </p>
+              </div>
+            </form>
+            <p class="fs1 info" style="font-weight: 300">
+              Нажимая на кнопку, вы соглашаетесь с
+              <b>условиями использования и политикой конфиденциальности</b>
+            </p>
+          </div>
+          <div class="px4 py4 auth-info rd10">
+            <p class="fs2">Присоединяйся к тысячам довольных пользователей</p>
+            <span class="fs1"
+              >Получай рукописные тексты в пару кликов. <br>
+              Уникальный почерк для любых нужд — от учебы до персональных
+              сообщений</span
+            >
+          </div>
+          <figure class="auth-img rd10">
+            <img src="../imgs/register.png" alt="" />
+          </figure>
+        </div>
+      </div>
 
+      <footer class="w100 df jcsb rd10 footer">
+        <div class="df footer-left-section fs1">
+          <div class="df fdc gap2">
+            <span class="logo-footer"></span>
+            <span class="fs05" style="opacity: 0.5">© Hand Text 2024</span>
+          </div>
+          <div class="df fdc gap3">
+            <a href="#">Перевод текста</a>
+            <a href="#">Для кого </a>
+            <a href="#">Примеры</a>
+          </div>
+          <section class="w100 df aic fdc gap3">
+            <a
+              href="./auth.html?type=signin"
+              class="black-button border-white fs1"
+              >Войти</a
+            >
+            <a
+              href="./auth-signup.html?type=signup"
+              class="bordered-button border-white fs1"
+              >Зарегистрироваться</a
+            >
+          </section>
+          <div class="df fdc gap3">
+            <a href="./profile.html">Профиль</a>
+            <a href="#">Политика конфиденциальности</a>
+            <a href="./FAQ.html">Отписаться от услуг</a>
+          </div>
+        </div>
+        <section class="df aic gap3">
+          <a
+            href="./auth.html?type=signin"
+            class="black-button border-white fs1"
+            >Войти</a
+          >
+          <a
+            href="./auth-signup.html?type=signup"
+            class="bordered-button border-white fs1"
+            >Зарегистрироваться</a
+          >
+        </section>
+      </footer>
+    </div>
+    <div id="navbar-mobile-modal" style="display: none;"></div>
+    <div id="forgot-password" style="display: none;"></div>
+  </body>
+  <script src="../js/auth.js"></script>
+  <script src="../js/script.js"></script>
+  <script src="../js/modal.js"></script>
 </html>

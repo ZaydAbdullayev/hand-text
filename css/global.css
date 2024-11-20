@@ -87,6 +87,11 @@ a {
   text-decoration: none;
 }
 
+.input-height{
+  height: 34px !important;
+  padding: 0 8%;
+}
+
 .w100 {
   width: 100%;
 }
@@ -463,6 +468,102 @@ a {
     gap: 18px;
   }
 
+  .pd1 {
+    padding: 3px;
+  }
+
+  .pd2 {
+    padding: 6px;
+  }
+
+  .pd3 {
+    padding: 9px;
+  }
+
+  .pd4 {
+    padding: 12px;
+  }
+
+  .px1 {
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+
+  .px2 {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  .px3 {
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+
+  .px4 {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .px5 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .px6 {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .py1 {
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+
+  .py2 {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+  .py3 {
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+
+  .py4 {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .py5 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .py6 {
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  .pt1 {
+    padding-top: 3px;
+  }
+
+  .pt2 {
+    padding-top: 6px;
+  }
+
+  .pb1 {
+    padding-bottom: 3px;
+  }
+
+  .pb2 {
+    padding-bottom: 6px;
+  }
+
+  .fs05 {
+    font-size: var(--fs05);
+  }
+
   .wrapper {
     padding: 20px;
   }
@@ -507,5 +608,10 @@ a {
 
   .footer div > section {
     display: flex;
+
+    a {
+      width: 50%;
+      text-align: center;
+    }
   }
 }
