@@ -32,7 +32,7 @@
 }
 
 .font_contents > label.active {
-  background: #000000c9;
+  background: #000000cc;
   color: #ffffff;
 }
 
@@ -76,7 +76,7 @@
 }
 
 .font_contents::-webkit-scrollbar-thumb {
-  background: #000;
+  background: #000000cc;
   width: 3px;
   border-radius: 10px;
 }
@@ -182,6 +182,7 @@
 }
 
 .font-option {
+  color: #000000cc;
   .fa-circle-check {
     display: none;
   }
@@ -254,7 +255,7 @@
 
     > p.active {
       height: 100%;
-      background: #000;
+      background: #000000cc;
       color: #fff;
     }
   }
@@ -289,7 +290,7 @@
   }
 
   &:active::-webkit-slider-thumb {
-    background: #000;
+    background: #000000cc;
   }
 }
 

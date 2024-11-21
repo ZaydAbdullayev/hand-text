@@ -5,44 +5,48 @@ const slide_dots = document.querySelectorAll('.dot-slider');
 
 let currentIndex = 0;
 
-function updatePagination() {
+function updatePagination1() {
     slide_dots.forEach((dot, index) => {
         dot.classList.toggle("active", index === currentIndex);
     });
 }
 
-function scrollToIndex(index) {
+function s_scrollToIndex(index) {
+    const totalItems = slider.children.length;
     const itemWidth = slider.offsetWidth / 3;
+    if (index < 0) {
+        index = totalItems - 1;
+    }
+    if (index === 5) {
+        index = 0;
+    }
     slider.scrollTo({
         left: index * itemWidth,
         behavior: "smooth",
     });
-    currentIndex = index;
-    updatePagination();
+
+
+    updatePagination1(); // Pagination güncelle
 }
 
 nextBtn.addEventListener("click", () => {
-    const maxIndex = slide_dots.length - 3;
-    if (currentIndex < maxIndex) {
-        scrollToIndex(currentIndex + 1);
-    }
+    s_scrollToIndex(currentIndex + 1);
 });
 
 prevBtn.addEventListener("click", () => {
-    if (currentIndex > 0) {
-        scrollToIndex(currentIndex - 1);
-    }
+    s_scrollToIndex(currentIndex - 1);
 });
 
 // Scroll Listener
 slider.addEventListener("scroll", () => {
     const itemWidth = slider.offsetWidth / 3;
-    currentIndex = Math.round(slider.scrollLeft / itemWidth);
-    updatePagination();
+    currentIndex = Math.round(slider.scrollLeft / itemWidth) % slider.children.length;
+    updatePagination1();
 });
 
 // Başlangıçta pagination güncelle
-updatePagination();
+updatePagination1();
+
 
 
 document.querySelectorAll('.slide-img-box').forEach((box) => {
@@ -58,7 +62,7 @@ document.querySelectorAll('.slide-img-box').forEach((box) => {
 
     let currentIndex = 0;
 
-    function updatePagination() {
+    function updatePagination2() {
         fullscreen_dots.forEach((dot, index) => {
             dot.classList.toggle("active", index === currentIndex);
         });
@@ -70,7 +74,7 @@ document.querySelectorAll('.slide-img-box').forEach((box) => {
             behavior: "smooth",
         });
         currentIndex = index;
-        updatePagination();
+        updatePagination2();
     }
     nextBtn.addEventListener("click", () => {
         if (currentIndex < fullscreen_dots.length - 1) {
@@ -85,9 +89,9 @@ document.querySelectorAll('.slide-img-box').forEach((box) => {
     container.addEventListener("scroll", () => {
         const containerWidth = container.offsetWidth;
         currentIndex = Math.round(container.scrollLeft / containerWidth);
-        updatePagination();
+        updatePagination2();
     });
-    updatePagination();
+    updatePagination2();
     open_fullscreen.forEach(item => {
         item.addEventListener('click', () => {
             item.parentElement.classList.add('fullscreen');
@@ -114,7 +118,7 @@ if (r_slider) {
     const fullscreen_pagination = document.querySelector('.pagination-fullscreen');
     let currentIndex = 0;
 
-    function updatePagination() {
+    function updatePagination3() {
         const fullscreen_dots = document.querySelectorAll(".dot-fullscreen");
         fullscreen_dots.forEach((dot, index) => {
             dot.classList.toggle("active", index === currentIndex);
@@ -128,7 +132,7 @@ if (r_slider) {
             behavior: "smooth",
         });
         currentIndex = index;
-        updatePagination();
+        updatePagination3();
     }
 
     nextBtn_fullscreen.addEventListener("click", () => {
@@ -146,7 +150,7 @@ if (r_slider) {
     slider_fullscreen.addEventListener("scroll", () => {
         const containerWidth = slider_fullscreen.offsetWidth;
         currentIndex = Math.round(slider_fullscreen.scrollLeft / containerWidth);
-        updatePagination();
+        updatePagination3();
     });
 
     open_fullscreen.addEventListener('click', () => {
@@ -172,7 +176,7 @@ if (r_slider) {
             return `<span class="dot-fullscreen ${i === 0 ? 'active' : ''}"></span>`;
         }).join("");
         r_slider.classList.add('fullscreen');
-        updatePagination(); // Başlangıçta pagination güncelle
+        updatePagination3(); // Başlangıçta pagination güncelle
     });
 
     close.addEventListener('click', () => {
