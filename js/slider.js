@@ -187,7 +187,7 @@ if (r_slider) {
 
 
 const container = document.querySelector(".info-body");
-const dots = document.querySelectorAll(".dot");
+const dots = document.querySelectorAll(".dot-info");
 
 container.addEventListener("scroll", () => {
     const containerWidth = container.offsetWidth;

@@ -139,8 +139,6 @@ tooltips.forEach((tooltip) => {
                 });
             });
         } else if (name === "color-reset") {
-            default_colors.text_color = "#0035E2";
-            default_colors.background_color = "#0035E2";
             const children = [...text_body.children];
             children.forEach((element) => {
                 element.style.backgroundColor = "transparent";
