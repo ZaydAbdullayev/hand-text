@@ -2,49 +2,51 @@ const slider = document.querySelector('.slider');
 const nextBtn = document.querySelector('#next-slide');
 const prevBtn = document.querySelector('#prev-slide');
 const slide_dots = document.querySelectorAll('.dot-slider');
+const mobile = window.matchMedia("(max-width: 430px)").matches;
 
 let currentIndex = 0;
+const slide_action = mobile ? 1 : 3;
 
 function updatePagination1() {
-    slide_dots.forEach((dot, index) => {
-        dot.classList.toggle("active", index === currentIndex);
-    });
+  slide_dots.forEach((dot, index) => {
+    dot.classList.toggle("active", index === currentIndex);
+  });
 }
 
 function s_scrollToIndex(index) {
-    const totalItems = slider.children.length;
-    const itemWidth = slider.offsetWidth / 3;
-    if (index < 0) {
-        index = totalItems - 1;
-    }
-    if (index === 5) {
-        index = 0;
-    }
-    slider.scrollTo({
-        left: index * itemWidth,
-        behavior: "smooth",
-    });
+  const totalItems = slider.children.length;
+  const itemWidth = slider.offsetWidth / slide_action;
+  const last_index = mobile ? 6 : 5;
+  if (index < 0) {
+    index = totalItems - 1;
+  }
+  if (index === last_index) {
+    index = 0;
+  }
+  slider.scrollTo({
+    left: index * itemWidth,
+    behavior: "smooth",
+  });
 
-
-    updatePagination1(); // Pagination güncelle
+  updatePagination1(); // Pagination güncelle
 }
 
 nextBtn.addEventListener("click", () => {
-    s_scrollToIndex(currentIndex + 1);
+  s_scrollToIndex(currentIndex + 1);
 });
 
 prevBtn.addEventListener("click", () => {
-    s_scrollToIndex(currentIndex - 1);
+  s_scrollToIndex(currentIndex - 1);
 });
 
 // Scroll Listener
 slider.addEventListener("scroll", () => {
-    const itemWidth = slider.offsetWidth / 3;
-    currentIndex = Math.round(slider.scrollLeft / itemWidth) % slider.children.length;
-    updatePagination1();
+  const itemWidth = slider.offsetWidth / slide_action;
+  currentIndex =
+    Math.round(slider.scrollLeft / itemWidth) % slider.children.length;
+  updatePagination1();
 });
 
-// Başlangıçta pagination güncelle
 updatePagination1();
 
 
