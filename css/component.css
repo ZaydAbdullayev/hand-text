@@ -354,6 +354,7 @@
   right: 20px;
   font-size: 20px;
 }
+
 /* ============ subscribe modal ============ */
 
 /* ============== forgot password ============== */
@@ -405,7 +406,7 @@
   transition: all 0.3s ease;
   z-index: 9999;
   box-shadow: 0px 2px 10px 0px #0000001a;
-  
+
   input:not(.range-slider__range-small) {
     width: 0;
     height: 0;
@@ -542,6 +543,19 @@
     padding: 0 0px;
   }
 
+  .slider-item > figcaption {
+    padding: 20px;
+    height: 94px;
+    overflow: hidden;
+  }
+
+   .slider-item > figcaption >span {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+   }
+
   .more-imgs {
     flex-direction: column !important;
   }
@@ -555,7 +569,7 @@
 
   .pagination,
   .pagination-fullscreen {
-    display: flex;
+    display: flex !important;
   }
 
   .subscribe-content {
