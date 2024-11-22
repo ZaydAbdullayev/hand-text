@@ -102,7 +102,11 @@ tooltips.forEach((tooltip) => {
                     t.classList.remove("active");
                 }
             })
-            tooltip.classList.add("active");
+            if (name === "color") {
+                tooltip.classList.add("active");
+            } else if (name === "text-background" && startIndex === null && endIndex === null) {
+                tooltip.classList.add("active");
+            }
             const color_options = tooltip.querySelectorAll(".color-option");
             color_options.forEach((option) => {
                 option.addEventListener("click", () => {

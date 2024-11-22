@@ -89,7 +89,7 @@
   display: none;
 }
 
-.text-result_body :where(.pagination-fullscreen, .close) {
+.text-result_body :where(.close) {
   display: none !important;
 }
 
@@ -98,7 +98,7 @@
   box-shadow: 0px 5px 30px 0px #00000008;
 }
 
-.text-result_body.fullscreen :where(.pagination-fullscreen, .close) {
+.text-result_body.fullscreen :where(.close) {
   display: flex !important;
 }
 
@@ -266,9 +266,9 @@
 }
 
 .parametrs {
-  height: 300px;
   align-items: flex-start;
   background: #fff;
+  user-select: none;
 }
 
 .range-slider__range,
