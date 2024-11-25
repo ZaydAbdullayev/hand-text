@@ -87,6 +87,10 @@ a {
   text-decoration: none;
 }
 
+img {
+  user-select: none;
+}
+
 .input-height {
   height: 34px !important;
   padding: 0 8%;
