@@ -2,7 +2,7 @@ let default_colors = {
     text_color: "#0035E2",
     background_color: "#0035E2",
     brightness: 50,
-}
+};
 let active_format = null;
 let startIndex = null;
 let endIndex = null;
@@ -26,7 +26,7 @@ const formats = [
 </g>
 </svg>`,
         tooltip: true,
-        name: "text-background"
+        name: "text-background",
     },
     {
         icon: `<svg width="21" height="20" viewBox="0 0 21 20" fill="#d9d9d9" xmlns="http://www.w3.org/2000/svg">
@@ -62,7 +62,7 @@ const formats = [
 </svg>
 `,
         name: "format-clear",
-    }
+    },
 ];
 
 const adjustColorBrightness = (hexColor, brightness) => {
@@ -74,13 +74,13 @@ const adjustColorBrightness = (hexColor, brightness) => {
     return `rgba(${r}, ${g}, ${b}, ${alpha})`;
 };
 
-
 const _parametrs_header = document.querySelector("._left-params");
 
 formats.forEach((format) => {
     _parametrs_header.innerHTML += `
     <div class="rd5 tooltip" data-name="${format.name}">
-        <span class='w100 h100 df aic jc  cp tooltip-header'>${format.icon}</span>
+        <span class='w100 h100 df aic jc  cp tooltip-header'>${format.icon
+        }</span>
         ${format.tooltip ? `${renderTooltipBody(format.name)}` : ""}
     </div>
     `;
@@ -89,7 +89,7 @@ formats.forEach((format) => {
 const tooltips = document.querySelectorAll(".tooltip");
 tooltips.forEach((tooltip) => {
     const close = tooltip.querySelector(".close-tooltip");
-    const open = tooltip.querySelector('.tooltip-header')
+    const open = tooltip.querySelector(".tooltip-header");
     open.addEventListener("click", (e) => {
         e.stopPropagation();
         const name = tooltip.getAttribute("data-name");
@@ -101,17 +101,22 @@ tooltips.forEach((tooltip) => {
                 if (t !== tooltip) {
                     t.classList.remove("active");
                 }
-            })
+            });
             if (name === "color") {
                 tooltip.classList.add("active");
-            } else if (name === "text-background" && startIndex === null && endIndex === null) {
+            } else if (
+                name === "text-background" &&
+                startIndex === null &&
+                endIndex === null
+            ) {
                 tooltip.classList.add("active");
             }
             const color_options = tooltip.querySelectorAll(".color-option");
             color_options.forEach((option) => {
                 option.addEventListener("click", () => {
                     const color = option.getAttribute("data-color");
-                    default_colors[name === "color" ? "text_color" : "background_color"] = color;
+                    default_colors[name === "color" ? "text_color" : "background_color"] =
+                        color;
 
                     if (name === "color") {
                         text_body.style.setProperty("color", color);
@@ -127,11 +132,11 @@ tooltips.forEach((tooltip) => {
                 });
             });
 
-
             const other = tooltip.querySelector("#other");
             other.addEventListener("input", () => {
                 const color = other.value;
-                default_colors[name === "color" ? "text_color" : "background_color"] = color;
+                default_colors[name === "color" ? "text_color" : "background_color"] =
+                    color;
                 if (name === "color") {
                     text_body.style.setProperty("color", color);
                     c_path_element.style.fill = color;
@@ -203,7 +208,13 @@ function renderTooltipBody(name) {
                 <div class="df fdc aic gap3 tooltip-body">
                     <p class="w100 fs2 o08">Цвет текста</p>
                     <div class="w100 df aic jc gap2">
-                    ${colors.map((color) => `<label class="cp color-option ${color === default_colors.text_color && "active"}" style="border-color: ${color};background: ${color};" data-color="${color}"></label>`).join("")}
+                    ${colors
+                    .map(
+                        (color) =>
+                            `<label class="cp color-option ${color === default_colors.text_color && "active"
+                            }" style="border-color: ${color};background: ${color};" data-color="${color}"></label>`
+                    )
+                    .join("")}
                       <label class="cp">
                         <i class="fa-solid fa-eye-dropper"></i>
                         <input type="color" name="color" id="other">
@@ -217,7 +228,14 @@ function renderTooltipBody(name) {
                 <div class="df fdc aic gap3 tooltip-body">
                     <p class="w100 fs2 o08">Выделение текста</p>
                     <div class="w100 df aic jc gap2">
-                      ${colors.map((color) => `<label class="cp color-option ${color === default_colors.background_color && "active"}" style="border-color: ${color};background: ${color};" data-color="${color}"></label>`).join("")}
+                      ${colors
+                    .map(
+                        (color) =>
+                            `<label class="cp color-option ${color === default_colors.background_color &&
+                            "active"
+                            }" style="border-color: ${color};background: ${color};" data-color="${color}"></label>`
+                    )
+                    .join("")}
                       <label class="cp">
                         <i class="fa-solid fa-eye-dropper"></i>
                         <input type="color" name="color" id="other">
@@ -227,7 +245,8 @@ function renderTooltipBody(name) {
                         <span class="fs1 o08">Непрозрачность</span>
                         <div class="f1 df aic gap1">
                             <input class="range-slider__range-small" type="range" name="brightness" max="100" min="0" value="50" />
-                            <span class="fs2 range-slider__value-small">${default_colors.brightness}</span>
+                            <span class="fs2 range-slider__value-small">${default_colors.brightness
+                }</span>
                             <div class="df fdc aic gap fs1 counter">
                                 <i class="fa-solid fa-angle-up cp counter-plus"></i>
                                 <i class="fa-solid fa-angle-down cp counter-minus"></i>
@@ -252,6 +271,14 @@ text_body.addEventListener("mouseup", () => {
         endIndex = Array.from(endElement.parentElement.children).indexOf(endElement);
     }
 });
+document.addEventListener("mousedown", (event) => {
+    const selection = window.getSelection();
+    if (selection.toString().length === 0) {
+        startIndex = null;
+        endIndex = null;
+        console.log("Selection cleared");
+    }
+});
 
 text_body.addEventListener("touchend", () => {
     const selection = window.getSelection();
@@ -263,27 +290,35 @@ text_body.addEventListener("touchend", () => {
         endIndex = Array.from(endElement.parentElement.children).indexOf(endElement);
     }
 });
+document.addEventListener("touchstart", (event) => {
+    const selection = window.getSelection();
+    if (selection.toString().length === 0) {
+        startIndex = null;
+        endIndex = null;
+        console.log("Selection cleared");
+    }
+});
 
 document.addEventListener("DOMContentLoaded", () => {
-    const slider = document.querySelector('.range-slider-small');
-    const range = slider.querySelector('.range-slider__range-small');
-    const value = slider.querySelector('.range-slider__value-small');
-    const plus = slider.querySelector('.counter-plus');
-    const minus = slider.querySelector('.counter-minus');
+    const slider = document.querySelector(".range-slider-small");
+    const range = slider.querySelector(".range-slider__range-small");
+    const value = slider.querySelector(".range-slider__value-small");
+    const plus = slider.querySelector(".counter-plus");
+    const minus = slider.querySelector(".counter-minus");
     if (range && value) {
         value.textContent = range.value;
-        range.addEventListener('input', () => {
+        range.addEventListener("input", () => {
             value.textContent = range.value;
             default_colors.brightness = range.value;
         });
 
-        plus.addEventListener('click', () => {
+        plus.addEventListener("click", () => {
             range.value = +range.value + 1;
             value.textContent = range.value;
             default_colors.brightness = range.value;
         });
 
-        minus.addEventListener('click', () => {
+        minus.addEventListener("click", () => {
             range.value = +range.value - 1;
             value.textContent = range.value;
             default_colors.brightness = range.value;

@@ -121,6 +121,7 @@
   position: relative;
   aspect-ratio: 1/1.4;
   overflow: hidden;
+
   > img {
     width: 100%;
     height: 100%;
@@ -221,6 +222,7 @@
   box-shadow: 0px 5px 30px 0px #00000008;
   opacity: 0.8;
   font-size: 14px;
+
   > p > span {
     font-size: 12px;
     opacity: 0.5;
@@ -452,6 +454,7 @@
     color: #0035e2;
     border-bottom: 3px solid #0035e2;
   }
+
   > input {
     display: none;
   }
@@ -529,13 +532,13 @@
 
   .fullscreen .slider-container-fullscreen {
     width: 100%;
-    height: 420px;
+    aspect-ratio: 1/1.2;
     padding: 10px;
   }
 
   .slider-container-fullscreen .slider-fullscreen {
     width: 328px;
-    height: 420px;
+    height: 100%;
   }
 
   .slider-item {
@@ -549,12 +552,13 @@
     overflow: hidden;
   }
 
-   .slider-item > figcaption >span {
+  .slider-item > figcaption > span {
     display: -webkit-box;
     -webkit-line-clamp: 3;
+    line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
-   }
+  }
 
   .more-imgs {
     flex-direction: column !important;
@@ -568,7 +572,7 @@
   }
 
   .pagination,
-  .pagination-fullscreen {
+  .text-result_body.fullscreen .pagination-fullscreen {
     display: flex !important;
   }
 
@@ -658,6 +662,7 @@
   }
 
   .tooltip.active {
+    position: unset;
     margin-bottom: 110px;
   }
 
@@ -668,14 +673,10 @@
   .tooltip-body {
     position: absolute;
     text-align: center;
-    top: 170%;
-    left: -35px;
-    width: calc(100vw - 80px);
+    top: 50px;
+    left: 5px;
+    width: calc(100% - 10px);
     gap: 15px;
-  }
-
-  .tooltip:nth-child(2) .tooltip-body {
-    left: -75px;
   }
 
   .range-slider-small > span {

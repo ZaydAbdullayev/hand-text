@@ -533,7 +533,10 @@ input::-moz-focus-outer {
   }
 
   ._left-params {
+    position: relative;
+    width: 100%;
     align-items: flex-start !important;
+    justify-content: center;
     gap: 12px !important;
   }
 }
