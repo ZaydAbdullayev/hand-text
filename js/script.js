@@ -25,7 +25,7 @@ logo_footer.innerHTML = `<svg width="85" height="16" viewBox="0 0 85 16" fill="n
 <path d="M0 3.1325H1.32V7.3625H6.21V3.1325H7.53V13.2425H6.21V8.5025H1.32V13.2425H0V3.1325Z" fill="white" fill-opacity="0.8"/>
 <path d="M68.8133 0H84.8133V16H68.8133V0Z" fill="black"/>
 <path d="M72.3517 12.6666H78.1466V9.3333H81.4799V3.53847C81.4799 3.47858 81.4607 3.42941 81.4222 3.39097C81.3838 3.35252 81.3346 3.3333 81.2747 3.3333H72.3517C72.2919 3.3333 72.2427 3.35252 72.2042 3.39097C72.1658 3.42941 72.1466 3.47858 72.1466 3.53847V12.4615C72.1466 12.5214 72.1658 12.5705 72.2042 12.609C72.2427 12.6474 72.2919 12.6666 72.3517 12.6666ZM72.3517 13.6666C72.0193 13.6666 71.7353 13.5489 71.4997 13.3135C71.2643 13.0779 71.1466 12.7939 71.1466 12.4615V3.53847C71.1466 3.20602 71.2643 2.92202 71.4997 2.68647C71.7353 2.45102 72.0193 2.3333 72.3517 2.3333H81.2747C81.6072 2.3333 81.8912 2.45102 82.1267 2.68647C82.3622 2.92202 82.4799 3.20602 82.4799 3.53847V9.7628L78.5761 13.6666H72.3517ZM73.7747 9.1538V8.1538H76.8132V9.1538H73.7747ZM73.7747 6.49997V5.49997H79.8517V6.49997H73.7747Z" fill="white" fill-opacity="0.8"/>
-</svg> <small>1 . 4</small>`
+</svg> <small>1 . 5</small>`
 
 logo_footer.addEventListener('click', () => {
     window.location.href = 'index.html';
@@ -68,6 +68,32 @@ if (result_section && history_section) {
     });
 }
 
+const fakeHistory = Array.from({ length: 8 }, (_, i) => {
+    return `
+        <div class="w100 df aic gap3 pd4 rd5 history-item ${i === 0 && "active"}">
+            <span class="fs2 o08">15.05.24</span>
+            <p class="fs2 fw3 o08 history-info">
+              Функции белков в организме. 1. Структурная функция. Белки входят
+              в состав клеточных мембран, а также обюразуют основу волос
+            </p>
+            <span class="fs2 o08">2 страницы</span>
+            <div class="df aic gap2 action">
+              <i class="fa-solid fa-pencil fs1"></i>
+              <i class="fa-regular fa-trash-can fs1"></i>
+            </div>
+        </div>
+    `;
+});
+// history_container'in devamina ekle
+history_container.innerHTML = `${fakeHistory.join("")} <div class="w100 df aic jcsb rd10 history-footer">
+            <p class="fs2 fw3 o08">15.05.24 - 20.10.24</p>
+            <span class="df aic gap2 fs2 o08">
+              <i class="fa-solid fa-angle-left cp fs05 06"></i>
+              <span>1 / 10</span>
+              <i class="fa-solid fa-angle-right cp fs05 06"></i>
+            </span>
+          </div>`;
+
 const histories = document.querySelectorAll('.history-item');
 if (histories) {
     histories.forEach(history => {
@@ -86,18 +112,6 @@ document.addEventListener('gesturestart', (event) => event.preventDefault());
 document.addEventListener('gesturechange', (event) => event.preventDefault());
 document.addEventListener('gestureend', (event) => event.preventDefault());
 document.addEventListener('dblclick', (event) => event.preventDefault());
-
-document.querySelectorAll('input, textarea').forEach((element) => {
-    element.addEventListener('focus', (event) => {
-        document.body.style.zoom = "1"; // Zoom'u sıfırlar
-    });
-
-    element.addEventListener('blur', (event) => {
-        document.body.style.zoom = ""; // Zoom değerini geri alır
-    });
-});
-
-
 
 const faq_title = document.querySelector(".faq-title");
 if (faq_title && window.innerWidth < 430) {

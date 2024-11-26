@@ -1,56 +1,3 @@
-const slider = document.querySelector('.slider');
-const nextBtn = document.querySelector('#next-slide');
-const prevBtn = document.querySelector('#prev-slide');
-const slide_dots = document.querySelectorAll('.dot-slider');
-const mobile = window.matchMedia("(max-width: 430px)").matches;
-
-let currentIndex = 0;
-const slide_action = mobile ? 1 : 3;
-
-function updatePagination1() {
-    slide_dots.forEach((dot, index) => {
-        dot.classList.toggle("active", index === currentIndex);
-    });
-}
-
-function s_scrollToIndex(index) {
-    const totalItems = slider.children.length;
-    const itemWidth = slider.offsetWidth / slide_action;
-    const last_index = mobile ? 6 : 5;
-    if (index < 0) {
-        index = totalItems - 1;
-    }
-    if (index === last_index) {
-        index = 0;
-    }
-    slider.scrollTo({
-        left: index * itemWidth,
-        behavior: "smooth",
-    });
-
-    updatePagination1(); // Pagination güncelle
-}
-
-nextBtn.addEventListener("click", () => {
-    s_scrollToIndex(currentIndex + 1);
-});
-
-prevBtn.addEventListener("click", () => {
-    s_scrollToIndex(currentIndex - 1);
-});
-
-// Scroll Listener
-slider.addEventListener("scroll", () => {
-    const itemWidth = slider.offsetWidth / slide_action;
-    currentIndex =
-        Math.round(slider.scrollLeft / itemWidth) % slider.children.length;
-    updatePagination1();
-});
-
-updatePagination1();
-
-
-
 document.querySelectorAll('.slide-img-box').forEach((box) => {
     const more_imgs = box.querySelector('.more-imgs');
     const open = box.querySelector(".open-main-screen")
@@ -186,18 +133,6 @@ if (r_slider) {
         r_slider.classList.remove('fullscreen');
     });
 }
-
-
-const container = document.querySelector(".info-body");
-const dots = document.querySelectorAll(".dot-info");
-
-container.addEventListener("scroll", () => {
-    const containerWidth = container.offsetWidth;
-    const activeIndex = Math.round(container.scrollLeft / containerWidth);
-    dots.forEach((dot, index) => {
-        dot.classList.toggle("active", index === activeIndex);
-    });
-});
 
 
 const text_wrapper = document.querySelector('.text-generator-wrapper');

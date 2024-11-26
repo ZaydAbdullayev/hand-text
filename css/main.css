@@ -376,6 +376,15 @@ input::-moz-focus-outer {
   display: none !important;
 }
 
+.close-mobile-wrapper {
+  width: 24px;
+  height: 24px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media (max-width: 430px) {
   .hero > h6 {
     flex-direction: column;
