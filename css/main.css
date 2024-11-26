@@ -6,6 +6,7 @@
 }
 
 .text-generator > textarea::placeholder {
+  font-size: 14px;
   color: #0005;
 }
 
@@ -436,6 +437,9 @@ input::-moz-focus-outer {
   .text-generator > textarea {
     max-width: 100%;
     min-height: 100px;
+  }
+  .text-generator > textarea::placeholder {
+    font-size: 12px;
   }
 
   ._parametrs_header {
