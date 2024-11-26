@@ -8,43 +8,43 @@ let currentIndex = 0;
 const slide_action = mobile ? 1 : 3;
 
 function updatePagination1() {
-  slide_dots.forEach((dot, index) => {
-    dot.classList.toggle("active", index === currentIndex);
-  });
+    slide_dots.forEach((dot, index) => {
+        dot.classList.toggle("active", index === currentIndex);
+    });
 }
 
 function s_scrollToIndex(index) {
-  const totalItems = slider.children.length;
-  const itemWidth = slider.offsetWidth / slide_action;
-  const last_index = mobile ? 6 : 5;
-  if (index < 0) {
-    index = totalItems - 1;
-  }
-  if (index === last_index) {
-    index = 0;
-  }
-  slider.scrollTo({
-    left: index * itemWidth,
-    behavior: "smooth",
-  });
+    const totalItems = slider.children.length;
+    const itemWidth = slider.offsetWidth / slide_action;
+    const last_index = mobile ? 6 : 5;
+    if (index < 0) {
+        index = totalItems - 1;
+    }
+    if (index === last_index) {
+        index = 0;
+    }
+    slider.scrollTo({
+        left: index * itemWidth,
+        behavior: "smooth",
+    });
 
-  updatePagination1(); // Pagination güncelle
+    updatePagination1(); // Pagination güncelle
 }
 
 nextBtn.addEventListener("click", () => {
-  s_scrollToIndex(currentIndex + 1);
+    s_scrollToIndex(currentIndex + 1);
 });
 
 prevBtn.addEventListener("click", () => {
-  s_scrollToIndex(currentIndex - 1);
+    s_scrollToIndex(currentIndex - 1);
 });
 
 // Scroll Listener
 slider.addEventListener("scroll", () => {
-  const itemWidth = slider.offsetWidth / slide_action;
-  currentIndex =
-    Math.round(slider.scrollLeft / itemWidth) % slider.children.length;
-  updatePagination1();
+    const itemWidth = slider.offsetWidth / slide_action;
+    currentIndex =
+        Math.round(slider.scrollLeft / itemWidth) % slider.children.length;
+    updatePagination1();
 });
 
 updatePagination1();
@@ -206,6 +206,11 @@ const open_text_generator = document.querySelector('.open-text-generator');
 
 if (text_wrapper) {
     open_text_generator.addEventListener('click', (e) => {
+        e.stopPropagation();
+        text_wrapper.classList.add('mobile');
+    });
+
+    open_text_generator.addEventListener('touchstart', (e) => {
         e.stopPropagation();
         text_wrapper.classList.add('mobile');
     });

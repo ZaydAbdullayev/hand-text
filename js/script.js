@@ -82,17 +82,21 @@ if (histories) {
     });
 }
 
-document.addEventListener('gesturestart', (event) => {
-    event.preventDefault();
+document.addEventListener('gesturestart', (event) => event.preventDefault());
+document.addEventListener('gesturechange', (event) => event.preventDefault());
+document.addEventListener('gestureend', (event) => event.preventDefault());
+document.addEventListener('dblclick', (event) => event.preventDefault());
+
+document.querySelectorAll('input, textarea').forEach((element) => {
+    element.addEventListener('focus', (event) => {
+        document.body.style.zoom = "1"; // Zoom'u sıfırlar
+    });
+
+    element.addEventListener('blur', (event) => {
+        document.body.style.zoom = ""; // Zoom değerini geri alır
+    });
 });
 
-document.addEventListener('gesturechange', (event) => {
-    event.preventDefault();
-});
-
-document.addEventListener('gestureend', (event) => {
-    event.preventDefault();
-});
 
 
 const faq_title = document.querySelector(".faq-title");
