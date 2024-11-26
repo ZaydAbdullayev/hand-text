@@ -205,7 +205,8 @@ const close_mobile_wrapper = document.querySelector('.close-mobile-wrapper');
 const open_text_generator = document.querySelector('.open-text-generator');
 
 if (text_wrapper) {
-    open_text_generator.addEventListener('click', () => {
+    open_text_generator.addEventListener('click', (e) => {
+        e.stopPropagation();
         text_wrapper.classList.add('mobile');
     });
 

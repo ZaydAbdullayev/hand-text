@@ -86,10 +86,18 @@ document.addEventListener('gesturestart', (event) => {
     event.preventDefault();
 });
 
+document.addEventListener('gesturechange', (event) => {
+    event.preventDefault();
+});
+
+document.addEventListener('gestureend', (event) => {
+    event.preventDefault();
+});
+
 
 const faq_title = document.querySelector(".faq-title");
 if (faq_title && window.innerWidth < 430) {
-  faq_title.innerHTML = "Отписаться от услуг Hand Text";
-  faq_title.style.fontSize = "20px";
-  faq_title.style.padding = "0px";
+    faq_title.innerHTML = "Отписаться от услуг Hand Text";
+    faq_title.style.fontSize = "20px";
+    faq_title.style.padding = "0px";
 }
