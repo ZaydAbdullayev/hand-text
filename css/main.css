@@ -161,12 +161,14 @@
   overflow: hidden;
   > p {
     font-size: 24px;
+    width: 95%;
     padding-top: 25px;
     padding-left: 25px;
     padding-bottom: 25px;
     color: #0035e2;
     line-height: 28px;
-    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
 
     span {
       font-size: inherit;

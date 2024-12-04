@@ -261,15 +261,16 @@ function renderTooltipBody(name) {
     }
 }
 
-text_body.addEventListener("mouseup", () => {
-    const selection = window.getSelection();
-    if (selection.toString().length > 0) {
-        const range = selection.getRangeAt(0);
-        const startElement = range.startContainer.parentElement;
-        const endElement = range.endContainer.parentElement;
-        startIndex = Array.from(startElement.parentElement.children).indexOf(startElement);
-        endIndex = Array.from(endElement.parentElement.children).indexOf(endElement);
-    }
+text_input.addEventListener("mouseup", () => {
+    startIndex = text_input.selectionStart;
+    endIndex = text_input.selectionEnd;
+    console.log(startIndex, endIndex);
+});
+
+text_input.addEventListener("touchend", () => {
+    startIndex = text_input.selectionStart;
+    endIndex = text_input.selectionEnd;
+    console.log(startIndex, endIndex);
 });
 document.addEventListener("mousedown", (event) => {
     const selection = window.getSelection();
@@ -277,17 +278,6 @@ document.addEventListener("mousedown", (event) => {
         startIndex = null;
         endIndex = null;
         console.log("Selection cleared");
-    }
-});
-
-text_body.addEventListener("touchend", () => {
-    const selection = window.getSelection();
-    if (selection.toString().length > 0) {
-        const range = selection.getRangeAt(0);
-        const startElement = range.startContainer.parentElement;
-        const endElement = range.endContainer.parentElement;
-        startIndex = Array.from(startElement.parentElement.children).indexOf(startElement);
-        endIndex = Array.from(endElement.parentElement.children).indexOf(endElement);
     }
 });
 document.addEventListener("touchstart", (event) => {

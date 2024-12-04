@@ -123,7 +123,7 @@ const font_parametrs = [
     { title: 'Отступ слева', min: 0, max: 250, unit: "px", value: 25, name: 'padding-left' },
     { title: 'Отступ на чёт.стр.', min: 0, max: 250, unit: "px", value: 0, name: 'padding-even' },
     { title: 'Высота линий', min: 0, max: 100, unit: "px", value: 28, name: 'line-height' },
-    { title: 'Ширина контента', min: 0, max: 100, unit: "%", value: 100, name: 'width' }
+    { title: 'Ширина контента', min: 30, max: 100, unit: "%", value: 95, name: 'width' }
 ];
 
 const font_parametrs_content = document.querySelector('.range-items');
